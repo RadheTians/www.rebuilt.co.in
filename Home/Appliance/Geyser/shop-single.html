@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="zxx">
+   <head>
+      <title>Rebuilt</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <!-- External CSS libraries -->
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/bootstrap.min.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/magnific-popup.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/jquery.selectBox.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/dropzone.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/animate.min.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/leaflet.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/slick.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/jquery.mCustomScrollbar.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/fonts/font-awesome/css/font-awesome.min.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/fonts/flaticon/font/flaticon.css">
+      <!-- Favicon icon -->
+      <link rel="shortcut icon"href="https://www.rebuilt.co.in/assets/template/img/favicon.png" >
+      <!-- Google fonts -->
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPoppins:400,500,700,800,900%7CRoboto:100,300,400,400i,500,700">
+      <!-- Custom Stylesheet -->
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/style.css">
+      <link rel="stylesheet" type="text/css" id="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/skins/default.css">
+      
+      <link rel="stylesheet" href="https://www.rebuilt.co.in/assets/template/css/megamenu-style.css"/>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+      <style>
+         p,select,input,p,span,li,u,textarea,h6{
+            font-size:14px;
+         }
+         .rb-loader {
+           border: 16px solid #f3f3f3;
+           border-radius: 50%;
+           border-top: 16px solid #3498db;
+           width: 60px;
+           position:fixed;
+           left : 50%;
+            top : 50%;
+           z-index:99999;
+            margin:0px auto;
+            display: none;
+            background-position:center;
+           height: 60px;
+           -webkit-animation: spin 2s linear infinite; /* Safari */
+           animation: spin 2s linear infinite;
+         }
+
+         /* Safari */
+         @-webkit-keyframes spin {
+           0% { -webkit-transform: rotate(0deg); }
+           100% { -webkit-transform: rotate(360deg); }
+         }
+
+         @keyframes spin {
+           0% { transform: rotate(0deg); }
+           100% { transform: rotate(360deg); }
+         }
+        li.drop-down ul{
+          display:none;
+        }
+        li.drop-down:hover ul{
+          display:block;
+          position: relative;
+          z-index:999;
+        }
+        li.drop-down{
+          width:118px;
+        }
+        ul.dropdown-submenu li a,ul.dropdown-submenu li,ul.dropdown li,ul.dropdown li a{
+          background:#212529 !important;
+          color:#fff !important;
+        }
+        li.drop-down ul li ul.dropdown-submenu{
+            display: none;
+        }
+        li.drop-down ul li:hover ul.dropdown-submenu{
+            display: block;
+            position: relative;
+            left: 107%;
+            bottom: 24px;
+        }
+        li.drop-down ul li>ul.dropdown-submenu li{
+          max-height:40px;
+        }
+        li.drop-down>ul>li {
+          padding:6px 12px !important;
+          line-height:1em;
+          max-height:40px;
+        }
+        li.drop-down:hover ul li{
+          background: blue;
+          max-height:40px;
+        }
+        li.drop-down:hover ul li{
+          background: white;
+          color:black;
+        
+          padding:6px 8px;
+          width:200px;
+          border-bottom: 1px solid #cdcdcd !important;
+          padding:6px 12px !important;
+
+        }
+        li.drop-down:hover{
+          height:20px;
+        }
+
+      </style>
+       <script>
+         function gen_tkn_nm()
+         {
+            var  csrfName = "csrf_rbuilt_access_token";
+            return csrfName;
+            
+         }
+         function gen_tkn_hsh() {
+
+           var  csrfHash = "e0e0deed014cd88ff9afe5fe2c1b8718";
+           return csrfHash;
+         
+         }
+      </script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141289615-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141289615-1');
+</script>
+   </head>
+   <body id="top">
+      <div class="rb-loader"></div>
+
+      <!-- Top header start -->
+      <header class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="list-inline">
+                     <a href="https://wa.me/9896593029" target="blank"><i class="fa fa-whatsapp"></i>9896593029</a>
+                     <a href="tel:8929555400" target="_blank"><i class="fa fa-phone"></i>8929555400</a>
+                     
+                     <a href="mailto:info@rebuilt.co.in" target="_blank"><i class="fa fa-envelope"></i>info@rebuilt.co.in</a>
+                  </div>
+               </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                     <ul class="top-social-media pull-right">
+                        <li>
+                           <a target="_blank" href="https://www.facebook.com/ReBuilt.India/" class="facebook"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                           <a target="_blank" href="https://www.linkedin.com/company/rebuilt" class="linkedin"><i class="fa fa-linkedin"></i> </a>
+                        </li>
+                         <li>
+                           <a target="_blank" href="http://www.instagram.com/rebuilt_india/" class="instagram"><i class="fa fa-instagram"></i> </a>
+                        </li>
+                        <li>
+                           <a href="#">/</a>
+                        </li>
+   					              <li>
+                           <a href="https://www.rebuilt.co.in/Home/partner-register" class="sign-in"> BECOME A PROFESSIONAL</a>
+                        </li>
+   					            <li>
+                           <a href="#">/</a>
+                        </li>
+                                                <li>
+                           <a href="https://www.rebuilt.co.in/Home/Login" class="sign-in"><i class="fa fa-sign-in"></i> Login / Sign up </a>
+                        </li>
+                       <!--  <li>
+                           <a href="https://www.rebuilt.co.in/Home/Register" class="sign-in"><i class="fa fa-user"></i> Register</a>
+                        </li> -->
+                                             </ul>
+                  </div>
+            </div>
+         </div>
+      </header>
+      <!-- Top header end -->
+      <!-- main header start -->
+      <header class="main-header do-sticky" id="main-header-2">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <nav class="navbar navbar-expand-lg navbar-light rounded">
+                     <a class="navbar-brand logo" href="https://www.rebuilt.co.in/">
+                     <img src="https://www.rebuilt.co.in/assets/template/img/logos/black-logo.png" alt="logo">
+                     </a>
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="fa fa-bars"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbar">
+
+                        <ul class="navbar-nav ml-auto">
+                           <li class="nav-item dropdown">
+                              <a class="nav-link " href="https://www.rebuilt.co.in/">
+                              Home
+                              </a>
+                           </li>
+                           <li class="nav-item dropdown">
+                              <a class="nav-link " href="https://www.rebuilt.co.in/Home/About-us">
+                              About Us
+                              </a>
+                           </li>
+
+                           <li class="drop-down">
+                              <a class="nav-link" href="#">Services</a>
+                              
+                                 <ul class="dropdown">
+                                                                          
+                                                                                            
+                                                <li class="subs">
+                                                    <a class="dropdown-item" href="https://www.rebuilt.co.in/Home/Appliance/Geyser/Gurgaon">  
+                                                     Geyser                                                   </a>
+                                                </li>
+                                                                                                                                        
+                                                <li class="subs">
+                                                    <a class="dropdown-item" href="https://www.rebuilt.co.in/Home/Appliance/Refrigerator/Gurgaon">  
+                                                     Refrigerator                                                   </a>
+                                                </li>
+                                                                                                                                        
+                                                <li class="subs">
+                                                    <a class="dropdown-item" href="https://www.rebuilt.co.in/Home/Appliance/Microwave+%26+Oven/Gurgaon">  
+                                                     Microwave & Oven                                                   </a>
+                                                </li>
+                                                                                                                                        
+                                                <li class="subs">
+                                                    <a class="dropdown-item" href="https://www.rebuilt.co.in/Home/Appliance/RO+or+Water+Purifier/Gurgaon">  
+                                                     RO or Water Purifier                                                   </a>
+                                                </li>
+                                                                                                                                        
+                                                <li class="subs">
+                                                    <a class="dropdown-item" href="https://www.rebuilt.co.in/Home/Appliance/Washing+Machine/Gurgaon">  
+                                                     Washing Machine                                                   </a>
+                                                </li>
+                                                                                                                                        
+                                                <li class="subs">
+                                                    <a class="dropdown-item" href="https://www.rebuilt.co.in/Home/Appliance/A.C/Gurgaon">  
+                                                     A.C                                                   </a>
+                                                </li>
+                                                                                                                                        
+                                                <li class="subs">
+                                                    <a class="dropdown-item" href="https://www.rebuilt.co.in/Home/Appliance/T.V/Gurgaon">  
+                                                     T.V                                                   </a>
+                                                </li>
+                                                                                                                                
+                                                                </ul>
+
+                            </li>
+                            
+                              <!-- <li class="nav-item dropdown">
+                                <a class="nav-link " href="https://www.rebuilt.co.in/Home/Price-list">Prices </a>
+                              </li> -->
+                           <li class="nav-item dropdown">
+                              <a class="nav-link " href="https://www.rebuilt.co.in/Home/Offers">
+                              Offer
+                              </a>
+                           </li>
+						   
+						                <li class="nav-item dropdown">
+                              <a class="nav-link " href="https://www.rebuilt.co.in/Home/Career">
+                              Career
+                              </a>
+                           </li>
+						                <li class="nav-item dropdown">
+                              <a class="nav-link " href="https://www.rebuilt.co.in/Home/Blog">
+                              Blog
+                              </a>
+                           </li>
+                           <li class="nav-item dropdown">
+                              <a class="nav-link " href="https://www.rebuilt.co.in/Home/Contact-us">
+                              Contact US
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- main header end -->
+<script type="text/javascript">
+
+</script><link rel="stylesheet" href="https://www.rebuilt.co.in/assets/template/css/slide-home.css">
+<style>
+   .width_sidebar{
+      width:25% !important;
+   }
+   .orange_rb_clr{
+    color:white;
+   }
+   .get_is_rb{
+    font-size:17px;
+    font-weight: 600;
+   }
+   .main_rb_clr{
+   color: #e05473;
+    font-weight: 600;
+   }
+   .description-text{
+    text-align:justify;
+   }
+   .issue-cards{
+      padding: 6px 12px;
+    background: blue;
+    color: white;
+    border-radius:4px;
+   }
+   .black_clr{
+    background-color: black;
+    border:1px solid black;
+   }
+   .service_title{
+   padding: 8px 12px;
+   line-height:28px;
+    background: black;
+    color: white !important;
+    border-radius:4px;
+   }
+   .content-area-2{
+       background:#fff;
+   }
+   .property-thumbnail{
+       margin:10px 6px;
+   }
+    .modal-backdrop{
+            background-color: #2a2b2861;
+    }
+    .search-area-3 {
+      position:fixed !important;
+      right:3%;
+      top:20%;
+      z-index:999;
+      box-shadow: 2px 2px 1px black;
+    }
+    p.left,p.top,p.bottom,p.right{
+      font-size:12px;
+    }
+    p.left{
+      right: 3px !important;
+    top: 12px !important;
+    }
+    .banner .banner-slider-inner .typed-text {
+    font-size: 50px;
+    margin-bottom: 30px;
+    position: absolute;
+    top: 9px;
+    left: 23%;
+  }
+  .search-area-3 {
+    position: fixed !important;
+    right: 3%;
+    top: 20%;
+    z-index: 999;
+    box-shadow: 3px 4px 18px black;
+    color: white;
+    background-image: linear-gradient(#0011ffbf, #f8f9fa);
+  }
+  p.inspec_text{
+  color:#fff;
+  background:orange;
+  padding:12px 20px;
+  font-weight: 600px;
+
+}
+p.rb_ajax_rate_card_list{
+  color:orange;
+}
+.search-button{
+    height:60px !important;
+}
+.select2{
+    border-radius: 2px;
+    
+}
+.select2-container .select2-selection--single {
+    height: 60px !important;
+    font-size:28px !important;
+    padding:6px 2px !important;
+}
+.select2-selection__arrow {
+    height: 60px !important;
+}
+.selectpicker option.blank
+{
+    font-weight:900px;
+    color:#cdcdcd;
+    font-family: Arial;
+}
+.banner-slider-inner h1.typed-text{
+    font-size: 47px;
+    color: #fff;
+    margin: 0;
+    font-weight: 500;
+    z-index: 4;
+    position: relative;
+    font-family: Axiforma-SemiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    text-shadow: 0 1px 8px rgba(0,0,0,.2);
+}
+.banner-slider-inner p.typed{
+    font-weight: 500;
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 60px;
+    z-index: 4;
+    position: relative;
+    text-shadow: 0 1px 8px rgba(0,0,0,.4);
+    font-size: 21px;
+}
+p.typed-select{
+        margin: 0;
+    text-align: left;
+    margin-top: 2px;
+    font-size: 13px;
+    color: #fff;
+    top: -14px;
+    left: -75px;
+    position: relative;
+}
+span.rb_text-desc{
+    color:#000;
+    font-size:16px;
+}
+div.modal-footer a.close{
+background: #000;
+}
+.modal-content .step-7 input[type='text']{
+    border-radius: 0px !important;
+    width:100%;
+}
+.btn-color{
+    background: #999;
+    border:0px solid;
+}
+#rb_homepage_model_popup .modal-header {
+    padding: 24px 16px;
+    background: #e9ecef7a;
+}
+.modal-footer button.step{
+    background: #000 !important;
+    border: 1px black;
+}
+#rb_homepage_model_popup .modal-content>.modal-body,#modal-footer i.fa-arrow-circle-o-left {
+    background: #f8f9fa7d;
+}
+.modal-footer {
+    padding: 4px;
+}
+.rb_model_step1_head{
+    color:#000;
+}
+.err_msg p{
+    color:red !important;
+}
+.rb_cuurent_loc{
+  font-size: 47px;
+    color: #fff;
+    margin: 0;
+    font-weight: 500;
+    z-index: 4;
+    position: relative;
+    font-family: Axiforma-SemiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    text-shadow: 0 1px 8px rgba(0,0,0,.2);
+}
+@media only screen and (max-width: 600px) {
+    h1.typed-text{
+        font-size:26px !important;
+        text-align:center;
+        left:15% !important;
+    }
+  .search-area-3{
+      position:relative !important;
+      top:0px;
+      left:14px;
+      display:block !important;
+      box-shadow:none !important;
+  }
+  
+}
+a#service_page_specifc_button_for_rb_bkg{
+      color:red !important;
+  }
+  
+ div.search-area input,div.search-area select{
+      
+  }
+  .adfvc{
+      color:black;
+      font-weight:bolder;
+  }
+
+</style>
+<!-- Banner start -->
+<div class="banner" id="banner">
+   <!-- Sub banner start -->
+   <div class="sub-banner overview-bgi" style="background: rgba(0, 0, 0, 0.04) url('https://www.rebuilt.co.in/uploads/appliances/banner/1560594807-geyser.jpg') top left repeat;    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;">
+      <div class="container">
+        <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
+               <div class="carousel-content container">
+                  <div class="text-center">
+                     <h1 class="typed-text" align='center'>90 Days Service Warranty</h1>
+                  </div>
+               </div>
+            </div>
+         <div class="breadcrumb-area">
+            <h1>Geyser</h1>
+            <ul class="breadcrumbs">
+               <li><a href="https://www.rebuilt.co.in/">Home</a></li>
+                              <li class='active'><a href="https://www.rebuilt.co.in//Gurgaon">Gurgaon</a></li>
+                             <li class="active">Service & Repair</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="user-page content-area-2">
+  <div class="container-fluid"> 
+        <div class="row"> 
+            <div class="col-md-6">  
+            
+            </div>
+            <div class="col-md-6">  
+            
+          <div class="search-area search-area-3 d-none d-xl-block d-lg-block">
+          
+            
+                            
+            
+              <a href="https://wa.me/9896593029" target="blank" class="adfvc"><i class="fa fa-whatsapp"></i>&nbsp;9896593029</a>&nbsp;&nbsp;&nbsp;
+                     <a href="tel:8929555400" target="_blank" class="adfvc"><i class="fa fa-phone"></i>&nbsp;8929555400</a>
+                     
+            <h6 class="orange_rb_clr get_is_rb">Need a Service Professional:</h6>
+            <p class="orange_rb_clr "><a href="#" id="service_page_specifc_button_for_rb_bkg"><strong><i>Click to Get Instant Booking</i></strong></a></p>
+            <div class="search-area-inner">
+               <div class="search-contents">
+                   <form action="https://www.rebuilt.co.in/Home/customer_instant_enquiry" class="" id="" method="post" accept-charset="utf-8">
+<input type="hidden" name="csrf_rbuilt_access_token" value="e0e0deed014cd88ff9afe5fe2c1b8718" />                   
+                     <div class="form-group">
+                        <select class="selectpicker search-fields" name="appliance_nm">
+                           <option value="Geyser Services & Repair">Geyser Services & Repair</option>
+                        </select>
+                     </div>
+                     <div class="form-group">
+                        <select class="selectpicker search-fields" name="location">
+                           <option value="Gurgaon">
+                               Gurgaon                            </option>
+                        </select>
+                     </div>
+                     <div class="form-group">
+                                                  <input type="hidden" name="service_page_app_name" id="service_page_app_name" value="9"/>
+                                                                          <input type="hidden" name="service_page_loc_name" id="service_page_loc_name" value="1"/>
+                                            </div>
+                    <div class="form-group"> 
+                        <input type="text" name="customer_name" id="customer_name" class="form-control" placeholder="Enter name" />
+                        <div class="err_msg"></div>
+                    </div>
+                    <div class="form-group"> 
+                        <input type="text" name="mobile_no" id="mobile_no" class="form-control" placeholder="Mobile no." />
+                        <div class="err_msg"></div>
+                    </div>
+                    <div class="form-group"> 
+                        <textarea name="customer_query" id="customer_query" rows="2" cols="5" class="form-control" placeholder="Write your Query" ></textarea>
+                        <div class="err_msg"></div>
+                    </div>
+                    <button class='btn btn-primary black_clr' id="">Book Now</button>
+                     <div class="form-group">
+                        <p class="main_rb_clr"><i>based on 5k reviews<span style="float:right;">4.5 <i class="fa fa-star"></i></span></i></p>
+                     </div>
+                </form>               </div>
+            </div>
+         </div>
+    </div>
+</div>
+</div>
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-lg-3 col-md-12 col-sm-12" >
+            <div class="user-profile-box mrb header_style_1" >
+               <div class="header clearfix">
+                  <h3>Appliance</h3>
+               </div>
+               <div class="detail clearfix">
+                  <ul>
+                     <li>
+                        <a href="#htw-step-1">
+                       About Geyser Appliance
+                        </a>
+                     </li>
+                      <li>
+                        <a href="#htw-step-2">
+                           How it works
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#id9">
+                      Types of Geyser                        </a>
+                     </li>
+                     <li>
+                        <a href="#id2">
+                      Geyser  Appliances Services
+                        </a>
+                     </li>
+                     <!-- <li>
+                        <a href="#id4">
+                           Appliances Brands
+                        </a>
+                     </li> -->
+                     <li>
+                        <a href="#id3">Geyser Appliances Isuue</a>
+                     </li>
+                                  
+                      <li>
+                        <a href="#id5">Geyser Spare Parts</a>
+                     </li>
+                                        <li>
+                        <a href="#id6">Geyser Price List</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-6 col-md-12">
+            <div class="blog-1" id="htw-step-1">
+               <div class="container  content-area-9">
+                  <div class="col-lg-12 align-self-center">
+                     <div class="row">
+                           <h2 align='center'>About Geyser</h2>
+                        <div class="col-lg-12 align-self-center">
+                                                         <div class="description-text"> <p><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif"><span style="font-size:11pt"><strong><span style="font-size:12.0pt">Geyser Repair</span></strong></span></span></p>
+
+<p><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif"><span style="font-size:11pt"><span style="font-size:12.0pt">Hot water has become an absolute necessity during the winter. Hence,the &nbsp;geyser has become a vital home appliance. The lack of working geyser compels you to resort to hazardous ways of warming water like rods and kitchen stoves. You can contact us and switch back to safe and convenient bathing.</span></span></span><br />
+&nbsp;</p>
+
+<p><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif"><span style="font-size:11pt"><strong><span style="font-size:12.0pt">Services offered</span></strong></span></span></p>
+
+<p><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif"><span style="font-size:11pt"><span style="font-size:12.0pt">If you are searching for any kind of geyser repair and maintenance service, just reach out to us and we would help you promptly. You can schedule an appointment with us. Our expert technicians will identify and provide you the estimate to fix the faulty geyser. We offer a wide range of geyser services including</span></span></span></p>
+
+<ul>
+	<li><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif"><span style="font-size:11pt"><span style="font-size:12.0pt">Geyser Installation</span></span></span></li>
+	<li><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif"><span style="font-size:11pt"><span style="font-size:12.0pt">Geyser Repair</span></span></span></li>
+	<li><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif"><span style="font-size:11pt"><span style="font-size:12.0pt">Geyser Part Repair</span></span></span></li>
+	<li><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif"><span style="font-size:11pt"><span style="font-size:12.0pt"><span style="color:#3e3d3d">Geyser Cleaning</span></span></span></span></li>
+</ul>
+
+<p style="margin-left:24px"><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif"><span style="font-size:11pt"><span style="font-size:12.0pt"><span style="color:#3e3d3d">We have a team that offers low- cost geyser repairing, installation and maintenance service. Our expert technicians provide prompt, reliable and excellent services to suit your needs. We promise to deliver you quality repair services at low budget and also provide you with 30 days warranty for our services. We offer repair and installation services for all brands including Havells, AO, Racold, Bajaj, Crompton, Venus, Lexus, Usha, and others.</span></span></span></span><br />
+&nbsp;</p>
+
+<p style="margin-left:24px"><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif"><span style="font-size:11pt"><strong><span style="font-size:12.0pt"><span style="color:#3e3d3d">Why Rebuilt</span></span></strong></span></span></p>
+
+<ul>
+	<li><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif"><span style="font-size:11pt"><strong><span style="font-size:12.0pt"><span style="color:#3e3d3d">Hassle- free procedure</span></span></strong><span style="font-size:12.0pt"><span style="color:#3e3d3d">- You can schedule the appointment with our qualified service agent at the click of the mouse.</span></span></span></span></li>
+	<li><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif"><span style="font-size:11pt"><strong><span style="font-size:12.0pt"><span style="color:#3e3d3d">We have a team of qualified professionals</span></span></strong><span style="font-size:12.0pt"><span style="color:#3e3d3d">- We have a team of qualified service professionals who are there to assist you at every step.</span></span></span></span></li>
+	<li><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif"><span style="font-size:11pt"><strong><span style="font-size:12.0pt"><span style="color:#3e3d3d">No hidden charges-</span></span></strong><span style="font-size:12.0pt"><span style="color:#3e3d3d"> We believe in transparency of charges, hence we have a standardized rate card.</span></span></span></span></li>
+	<li><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif"><span style="font-size:11pt"><strong><span style="font-size:12.0pt"><span style="color:#3e3d3d">Diagnosis- </span></span></strong><span style="font-size:12.0pt"><span style="color:#3e3d3d">We offer a comprehensive diagnosis and repair services and it can be decided after the inspection.</span></span> </span></span></li>
+</ul>
+</div>
+                                                      </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="blog-1" id="htw-step-2">
+               <div class="container  content-area-9">
+                  <div class="work-container">
+                  <h2>How it Works</h2>
+                  <div class="step-wrapper move-line">
+                  <article class="linestep linestep1" style="left: 46%;top: -6%;"> 
+                     <span class="num"> 1</span>
+                     <p class="bottom">
+                      Choose the location
+                     </p>
+                  </article
+                  <article class="linestep linestep2" style="right: -3.5%;top: 19%;"> 
+                     <span class="num"> 2</span>
+                     <p class="left">
+                          Choose the Appliance</p>
+                  </article>
+                  <article class="linestep linestep3" style="left: 68%;top: 39%;"> 
+                     <span class="num"> 3</span>
+                     <p class="bottom">
+                        Choose the type of Appliance
+                     </p>
+                  </article>
+                  <article class="linestep linestep4" style="left: 32%;top: 40.5%;"> 
+                     <span class="num">4</span>
+                     <p class="top">
+                       Choose the service you need </p>
+                  </article
+                  <article class="linestep linestep5" style="left: -1.5%; top: 68%;"> 
+                     <span class="num"> 5</span>
+                     <p class="right">
+                         enter where you want the service
+                     </p>
+                  </article>
+                  <article class="linestep linestep6" style="left: 21%;top: 87%;"> 
+                     <span class="num"> 6</span>
+                     <p class="bottom">
+                        choose the time-slot
+                     </p>
+                  </article>
+                  <article class="linestep linestep7" style="left: 53%;top: 87%;"> 
+                     <span class="num"> 7</span>
+                     <p class="top">
+                        confirm mobile no.
+                     </p>
+                  </article>
+                  <article class="linestep linestep8" style="left: 86%;top: 87%;"> 
+                     <span class="num"> 8</span>
+                     <p class="bottom">
+                        Enter otp And booked.
+                     </p>
+                  </article>
+                  <svg width="100%" viewBox="0 0 1156 608" xmlns="http://www.w3.org/2000/svg">
+                    <path class="path" d="m560.30957,10.588011c0,0 438.0947,1.90476 439.04708,1.90476c0.95238,0 144.57857,-1.02912 143.80934,137.14269c-0.76923,138.17181 -116.81095,142.30859 -131.61967,143.8923c-14.80873,1.58372 -840.41472,-0.71429 -860.5941,0.71429c-20.17938,1.42858 -148.4991,6.80903 -146.83244,147.05973c1.66666,140.2507 129.52365,152.14266 129.33243,151.27321c0.19122,0.86945 815.268425,2.687632 951.42748,0" opacity="0.5" stroke-width="7" stroke="#2567d1" fill="none"></path>
+                  </svg>
+                </div>
+            </div> 
+        </div>
+    </div>
+       <!-------END SERVICE ----------->
+            <div class="blog-1"  id="id2">
+              <h5 class="heading">Appliance services </h5>
+                        
+               <div class="container  content-area-9">
+                  <div class="col-lg-12 align-self-center">
+                                                                   <div class="moving_slider">
+                          <div id="mixedSlider">
+                            <h5 class="heading">Appliance services </h5>
+                              <div class="MS-content">
+
+                                                                  <div class="item">
+                                      <div class="imgTitle">
+                                          <h6 class="blogTitle service_title">Servicing</h6>
+                                          <img src="https://www.rebuilt.co.in/uploads/appliances/service/photo/1562089762-gyser.jpg" alt="" />
+                                      </div>
+                                  </div>
+                                                                  <div class="item">
+                                      <div class="imgTitle">
+                                          <h6 class="blogTitle service_title">Uninstallation</h6>
+                                          <img src="https://www.rebuilt.co.in/uploads/appliances/service/photo/" alt="" />
+                                      </div>
+                                  </div>
+                                                                  <div class="item">
+                                      <div class="imgTitle">
+                                          <h6 class="blogTitle service_title">Installing</h6>
+                                          <img src="https://www.rebuilt.co.in/uploads/appliances/service/photo/" alt="" />
+                                      </div>
+                                  </div>
+                                                                  <div class="item">
+                                      <div class="imgTitle">
+                                          <h6 class="blogTitle service_title">Repairing</h6>
+                                          <img src="https://www.rebuilt.co.in/uploads/appliances/service/photo/1562089748-gyser.jpg" alt="" />
+                                      </div>
+                                  </div>
+                                   
+                              </div>
+                              <div class="MS-controls">
+                                  <button class="MS-left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                  <button class="MS-right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                              </div>
+                          </div>
+                        </div>
+                                                                </div>
+               </div>
+            </div>
+
+            <!-- Appliance type -->
+
+             <div class="blog-1" id="id9">
+               <div class="container  content-area-9">
+                  <div class="main-title">
+                     <h1 class="mt-20">Appliance Types</h1>
+                     <p>Guaranteed high quality repair services under one roof</p>
+                  </div>
+                  <div class="col-lg-12 align-self-center">
+                     <div class="row">
+                                                                                                                  <div class="col-md-4 blocks_tiny">
+                                    <p align="center"  class='issue-cards'>Gas Gyser</p>
+                                 </div>
+                                                               <div class="col-md-4 blocks_tiny">
+                                    <p align="center"  class='issue-cards'>Electric Gyser</p>
+                                 </div>
+                                                                                                       </div>
+                  </div>
+               </div>
+            </div>
+          <!------------END APPLIANCE SERVICE------>  
+          
+           <!------------APPLIANCE ISSUE------>
+
+            <div class="blog-1" id="id3">
+               <div class="container  content-area-9">
+                  <div class="main-title">
+                     <h1 class="mt-20">Appliance issues</h1>
+                     <p>Guaranteed high quality repair services under one roof</p>
+                  </div>
+                  <div class="col-lg-12 align-self-center">
+                     <div class="row">
+                                                                                                              <div class="col-md-4 blocks_tiny">
+                                 <p align="center" class='issue-cards'>No Issue Only service </p>
+                              </div>
+                                                         <div class="col-md-4 blocks_tiny">
+                                 <p align="center" class='issue-cards'>installation</p>
+                              </div>
+                                                                                
+                                              </div>
+                  </div>
+               </div>
+            </div>
+         
+             <!-----------END --APPLIANCE ISSUE------>
+    
+         
+           <!------------SPARE PARTS ------>
+                        <div class="blog-1" id="id5">
+               <div class="shop-list">
+                  <div class="container  bg-white content-area-9">
+                     <div class="main-title">
+                        <h1 class="">Spare parts</h1>
+                        <p></p>
+                     </div>
+                     <div class="row">
+                       
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.500/-</h4>
+                                 <h3><a href="shop-single.html">Gasket</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.700/-</h4>
+                                 <h3><a href="shop-single.html">Heating element</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.350/-</h4>
+                                 <h3><a href="shop-single.html">Thermostate</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.450/-</h4>
+                                 <h3><a href="shop-single.html">Capillary Thermostat</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.450/-</h4>
+                                 <h3><a href="shop-single.html">Capillary Thermostat</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.3200/-</h4>
+                                 <h3><a href="shop-single.html"> Cooper tan</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.2500/-</h4>
+                                 <h3><a href="shop-single.html"> stainless steel tank</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.250/-</h4>
+                                 <h3><a href="shop-single.html">Descale</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.900/-</h4>
+                                 <h3><a href="shop-single.html">Assembly stainless steel</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.1700/-</h4>
+                                 <h3><a href="shop-single.html">Assembly Cooper</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.380/-</h4>
+                                 <h3><a href="shop-single.html">PRV(pressure release value)</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.550/-</h4>
+                                 <h3><a href="shop-single.html">MFV(multi function value)</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.500/-</h4>
+                                 <h3><a href="shop-single.html">Gasket</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.700/-</h4>
+                                 <h3><a href="shop-single.html">Heating element</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.350/-</h4>
+                                 <h3><a href="shop-single.html">Thermostate</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.450/-</h4>
+                                 <h3><a href="shop-single.html">Capillary Thermostat</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.3200/-</h4>
+                                 <h3><a href="shop-single.html"> Cooper tan</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.2500/-</h4>
+                                 <h3><a href="shop-single.html">stainless steel tank</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.250/-</h4>
+                                 <h3><a href="shop-single.html">Descale</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.900/-</h4>
+                                 <h3><a href="shop-single.html">Assembly stainless steel</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.1700/-</h4>
+                                 <h3><a href="shop-single.html">Assembly Cooper</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.380/-</h4>
+                                 <h3><a href="shop-single.html">PRV(pressure release value)</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="shop-box">
+                              <!--<img class="shop-theme img-fluid" src="https://www.rebuilt.co.in/assets/template/img/sparepart.jpg" alt="shop-2">-->
+                              <div class="shop-details">
+                                 <h4>Rs.550/-</h4>
+                                 <h3><a href="shop-single.html">MFV(multi function value)</a></h3>
+                                 <!-- <a class="btn btn-border btn-sm" href="shop-cart.html" role="button">Add to Cart</a>-->
+                              </div>
+                           </div>
+                        </div>
+                                                
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+                        <!----------END--SPARE PARTS ------>
+            <!---- Price list --->
+            <div class="blog-1" id="id6">
+                <div class="shop-list">
+                    <div class="container bg-white content-area-9">
+                     <div class="row">
+   <div class="col-md-4"></div>
+   <div class="col-md-4">
+      <img src="https://www.rebuilt.co.in/uploads/appliances/photo/1557340365-Geyser.png" alt=""><br>
+      <p align='center'>
+      Geyser      </p>
+   </div>
+   <div class="col-md-4"></div>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+               <h4 class="headi text-center">Gas Gyser Servicing</h4>
+   <div class="row agent-4">
+            <table class="table">
+         <thead>
+            <tr class="set_back">
+               <th>Sr. No</th>
+               <th>Part name</th>
+               <th>Repair &amp; Service cost </th>
+               <!-- <th></th>
+               <th>Add to cart</th> -->
+            </tr>
+         </thead>
+         <tbody>
+                                                                                                                                                   <tr>
+                     <td>1</td>
+                     <td>No Issue Only service </td>
+                     <td>INR 499</td>
+                     <!-- <td><a href="#"><i class="fa fa-arrow-right "></i></a></td>
+                     <td><button class="search-button btn-md btn-color" type="submit">Add to cart</button></td> -->
+                  </tr>
+                                                                                                                                                         </tbody>
+      </table>
+         </div>
+      <h4 class="headi text-center">Gas Gyser Uninstallation</h4>
+   <div class="row agent-4">
+            <table class="table">
+         <thead>
+            <tr class="set_back">
+               <th>Sr. No</th>
+               <th>Part name</th>
+               <th>Repair &amp; Service cost </th>
+               <!-- <th></th>
+               <th>Add to cart</th> -->
+            </tr>
+         </thead>
+         <tbody>
+                                                                                                                        <tr>
+                     <td>1</td>
+                     <td>uninstallation</td>
+                     <td>INR 299</td>
+                     <!-- <td><a href="#"><i class="fa fa-arrow-right "></i></a></td>
+                     <td><button class="search-button btn-md btn-color" type="submit">Add to cart</button></td> -->
+                  </tr>
+                                                                                                                                                                                    </tbody>
+      </table>
+         </div>
+      <h4 class="headi text-center">Gas Gyser Installing</h4>
+   <div class="row agent-4">
+            <table class="table">
+         <thead>
+            <tr class="set_back">
+               <th>Sr. No</th>
+               <th>Part name</th>
+               <th>Repair &amp; Service cost </th>
+               <!-- <th></th>
+               <th>Add to cart</th> -->
+            </tr>
+         </thead>
+         <tbody>
+                                                                                             <tr>
+                     <td>1</td>
+                     <td>installation</td>
+                     <td>INR 499</td>
+                     <!-- <td><a href="#"><i class="fa fa-arrow-right "></i></a></td>
+                     <td><button class="search-button btn-md btn-color" type="submit">Add to cart</button></td> -->
+                  </tr>
+                                                                                                                                                                                                               </tbody>
+      </table>
+         </div>
+      <h4 class="headi text-center">Gas Gyser Repairing</h4>
+   <div class="row agent-4">
+            <table class="table">
+         <thead>
+            <tr class="set_back">
+               <th>Sr. No</th>
+               <th>Part name</th>
+               <th>Repair &amp; Service cost </th>
+               <!-- <th></th>
+               <th>Add to cart</th> -->
+            </tr>
+         </thead>
+         <tbody>
+                                                                  <tr>
+                     <td>1</td>
+                     <td>Visit Charge</td>
+                     <td>INR 249</td>
+                     <!-- <td><a href="#"><i class="fa fa-arrow-right "></i></a></td>
+                     <td><button class="search-button btn-md btn-color" type="submit">Add to cart</button></td> -->
+                  </tr>
+                                                                                                                                                                                                                                          </tbody>
+      </table>
+         </div>
+     <!-- end v2 foreach-->
+            <h4 class="headi text-center">Electric Gyser Servicing</h4>
+   <div class="row agent-4">
+            <table class="table">
+         <thead>
+            <tr class="set_back">
+               <th>Sr. No</th>
+               <th>Part name</th>
+               <th>Repair &amp; Service cost </th>
+               <!-- <th></th>
+               <th>Add to cart</th> -->
+            </tr>
+         </thead>
+         <tbody>
+                                                                                                                                                                                                                                                               <tr>
+                     <td>1</td>
+                     <td>No Issue Only service </td>
+                     <td>INR 499</td>
+                     <!-- <td><a href="#"><i class="fa fa-arrow-right "></i></a></td>
+                     <td><button class="search-button btn-md btn-color" type="submit">Add to cart</button></td> -->
+                  </tr>
+                                             </tbody>
+      </table>
+         </div>
+      <h4 class="headi text-center">Electric Gyser Uninstallation</h4>
+   <div class="row agent-4">
+            <table class="table">
+         <thead>
+            <tr class="set_back">
+               <th>Sr. No</th>
+               <th>Part name</th>
+               <th>Repair &amp; Service cost </th>
+               <!-- <th></th>
+               <th>Add to cart</th> -->
+            </tr>
+         </thead>
+         <tbody>
+                                                                                                                                                                                                                                    <tr>
+                     <td>1</td>
+                     <td>uninstallation</td>
+                     <td>INR 299</td>
+                     <!-- <td><a href="#"><i class="fa fa-arrow-right "></i></a></td>
+                     <td><button class="search-button btn-md btn-color" type="submit">Add to cart</button></td> -->
+                  </tr>
+                                                                        </tbody>
+      </table>
+         </div>
+      <h4 class="headi text-center">Electric Gyser Installing</h4>
+   <div class="row agent-4">
+            <table class="table">
+         <thead>
+            <tr class="set_back">
+               <th>Sr. No</th>
+               <th>Part name</th>
+               <th>Repair &amp; Service cost </th>
+               <!-- <th></th>
+               <th>Add to cart</th> -->
+            </tr>
+         </thead>
+         <tbody>
+                                                                                                                                                                                                         <tr>
+                     <td>1</td>
+                     <td>installation</td>
+                     <td>INR 499</td>
+                     <!-- <td><a href="#"><i class="fa fa-arrow-right "></i></a></td>
+                     <td><button class="search-button btn-md btn-color" type="submit">Add to cart</button></td> -->
+                  </tr>
+                                                                                                   </tbody>
+      </table>
+         </div>
+      <h4 class="headi text-center">Electric Gyser Repairing</h4>
+   <div class="row agent-4">
+            <table class="table">
+         <thead>
+            <tr class="set_back">
+               <th>Sr. No</th>
+               <th>Part name</th>
+               <th>Repair &amp; Service cost </th>
+               <!-- <th></th>
+               <th>Add to cart</th> -->
+            </tr>
+         </thead>
+         <tbody>
+                                                                                                                                                                              <tr>
+                     <td>1</td>
+                     <td>Visit Charge</td>
+                     <td>INR 249</td>
+                     <!-- <td><a href="#"><i class="fa fa-arrow-right "></i></a></td>
+                     <td><button class="search-button btn-md btn-color" type="submit">Add to cart</button></td> -->
+                  </tr>
+                                                                                                                              </tbody>
+      </table>
+         </div>
+     <!-- end v2 foreach-->
+    <!-- end v1 foreach-->
+   </div>
+
+
+<div class="col-lg-12 col-md-12 col-sm-12">
+    
+
+   <div class="row agent-4">
+               <h4 class="headi text-center">Gas Gyser SPARE/ PARTS</h4>
+   
+      <table class="table">
+         <thead>
+            <tr class="set_back">
+               <th>Sr. No</th>
+               <th>Repair/Service</th>
+               <th>spare /part cost</th>
+               <th>Labour Cost</th>
+            </tr>
+         </thead>
+         <tbody>
+                                                         <tr>
+                     <td>1</td>
+                     <td>Gasket</td>
+                     <td>INR 500</td>
+                     <td>INR 250</td>
+                  </tr>
+                                                     <tr>
+                     <td>2</td>
+                     <td>Heating element</td>
+                     <td>INR 700</td>
+                     <td>INR 300</td>
+                  </tr>
+                                                     <tr>
+                     <td>3</td>
+                     <td>Thermostate</td>
+                     <td>INR 350</td>
+                     <td>INR 250</td>
+                  </tr>
+                                                     <tr>
+                     <td>4</td>
+                     <td>Capillary Thermostat</td>
+                     <td>INR 450</td>
+                     <td>INR 350</td>
+                  </tr>
+                                                     <tr>
+                     <td>5</td>
+                     <td>Capillary Thermostat</td>
+                     <td>INR 450</td>
+                     <td>INR 350</td>
+                  </tr>
+                                                     <tr>
+                     <td>6</td>
+                     <td> Cooper tan</td>
+                     <td>INR 3200</td>
+                     <td>INR 350</td>
+                  </tr>
+                                                     <tr>
+                     <td>7</td>
+                     <td> stainless steel tank</td>
+                     <td>INR 2500</td>
+                     <td>INR 350</td>
+                  </tr>
+                                                     <tr>
+                     <td>8</td>
+                     <td>Descale</td>
+                     <td>INR 250</td>
+                     <td>INR 350</td>
+                  </tr>
+                                                     <tr>
+                     <td>9</td>
+                     <td>Assembly stainless steel</td>
+                     <td>INR 900</td>
+                     <td>INR 350</td>
+                  </tr>
+                                                     <tr>
+                     <td>10</td>
+                     <td>Assembly Cooper</td>
+                     <td>INR 1700</td>
+                     <td>INR 350</td>
+                  </tr>
+                                                     <tr>
+                     <td>11</td>
+                     <td>PRV(pressure release value)</td>
+                     <td>INR 380</td>
+                     <td>INR 250</td>
+                  </tr>
+                                                     <tr>
+                     <td>12</td>
+                     <td>MFV(multi function value)</td>
+                     <td>INR 550</td>
+                     <td>INR 250</td>
+                  </tr>
+                                                                                                                                                                                                                                                                                                                </tbody>
+      </table>
+          </div>
+   
+
+   <div class="row agent-4">
+               <h4 class="headi text-center">Electric Gyser SPARE/ PARTS</h4>
+   
+      <table class="table">
+         <thead>
+            <tr class="set_back">
+               <th>Sr. No</th>
+               <th>Repair/Service</th>
+               <th>spare /part cost</th>
+               <th>Labour Cost</th>
+            </tr>
+         </thead>
+         <tbody>
+                                                                                                                                                                                                                                                                                                                                                                     <tr>
+                     <td>1</td>
+                     <td>Gasket</td>
+                     <td>INR 500</td>
+                     <td>INR 250</td>
+                  </tr>
+                                                     <tr>
+                     <td>2</td>
+                     <td>Heating element</td>
+                     <td>INR 700</td>
+                     <td>INR 300</td>
+                  </tr>
+                                                     <tr>
+                     <td>3</td>
+                     <td>Thermostate</td>
+                     <td>INR 350</td>
+                     <td>INR 250</td>
+                  </tr>
+                                                     <tr>
+                     <td>4</td>
+                     <td>Capillary Thermostat</td>
+                     <td>INR 450</td>
+                     <td>INR 350</td>
+                  </tr>
+                                                     <tr>
+                     <td>5</td>
+                     <td> Cooper tan</td>
+                     <td>INR 3200</td>
+                     <td>INR 350</td>
+                  </tr>
+                                                     <tr>
+                     <td>6</td>
+                     <td>stainless steel tank</td>
+                     <td>INR 2500</td>
+                     <td>INR 350</td>
+                  </tr>
+                                                     <tr>
+                     <td>7</td>
+                     <td>Descale</td>
+                     <td>INR 250</td>
+                     <td>INR 350</td>
+                  </tr>
+                                                     <tr>
+                     <td>8</td>
+                     <td>Assembly stainless steel</td>
+                     <td>INR 900</td>
+                     <td>INR 350</td>
+                  </tr>
+                                                     <tr>
+                     <td>9</td>
+                     <td>Assembly Cooper</td>
+                     <td>INR 1700</td>
+                     <td>INR 350</td>
+                  </tr>
+                                                     <tr>
+                     <td>10</td>
+                     <td>PRV(pressure release value)</td>
+                     <td>INR 380</td>
+                     <td>INR 250</td>
+                  </tr>
+                                                     <tr>
+                     <td>11</td>
+                     <td>MFV(multi function value)</td>
+                     <td>INR 550</td>
+                     <td>INR 250</td>
+                  </tr>
+                             </tbody>
+      </table>
+          </div>
+    <!-- end v1 foreach-->
+</div>
+                    </div>
+               </div>
+            </div>
+      </div>
+   </div>
+</div>
+<div class="intro-section">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-9 col-md-7 col-sm-12">
+            <div class="intro-text">
+               <h3>Are you a professional looking to grow your service business?</h3>
+            </div>
+         </div>
+         <div class="col-lg-3 col-md-3 col-sm-12">
+            <a href="https://www.rebuilt.co.in/Home/partner-register" class="btn btn-md sn">Join Now</a>
+         </div>
+      </div>
+   </div>
+</div><div class="modal-container" id="rb_homepage_model_popup">
+  <form class="modal multi-step" id="demo-modal-1" method="post" action="#">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+              <div class="row">
+                <div class="col-md-1"></div>
+                 <div class="col-md-10">
+                    <div id="modal-header-headings_title">
+                          <h5 class="modal-title step-1" align='center' data-step="1"></h5>
+                          <h5 class="modal-title step-2" align='center' data-step="2">What Are you looking for ?</h5>
+                          <h5 class="modal-title step-3" align='center' data-step="3">Add Item </h5>
+                          <h5 class="modal-title step-4" align='center' data-step="4">Summary of Services</h5>
+                          <h5 class="modal-title step-5" align='center' data-step="5">Choose Booking date and Time</h5>
+                    </div>
+                 </div>
+                  <div class="col-md-1"></div>
+              </div>
+            </div>
+            <form id="form_enquiry_Onrequest_form" name="form_enquiry_form_home" method="post">
+              <div class="modal-body step step-1"></div>
+              <div class="modal-body step step-2"></div>
+              <div class="modal-body step step-3"></div>
+              <div class="modal-body step step-4"></div>
+              <div class="modal-body step step-5" id="datatime_modal">
+                 <div style="width: 100%;">
+                      <div id="picker" style="position:relative;"> </div>
+                      <input type="hidden" id="result" value="" />
+                  </div>
+              </div>
+              <div class="modal-body step step-6"></div>
+              <div class="modal-body step step-7"></div>
+              <div class="modal-body step step-8"></div>
+              <div class="modal-body step step-9"></div>
+            </form>
+            <div class="modal-footer">
+                <a type="button" class="close" data-dismiss="modal">X</a>
+                <button type="button" class="btn btn-lg btn-block btn-color step step-1"data-step="2" onclick="sendEvent('#demo-modal-1', 2)">Continue</button>
+                <button type="button" class="btn btn-lg btn-block btn-color step step-2"data-step="3" disabled onclick="sendEvent('#demo-modal-1', 3)">Continue</button>
+                <button type="button" class="btn btn-lg btn-block btn-color step step-3" data-step="4" disabled onclick="sendEvent('#demo-modal-1', 4)">Get Booking Summary </button>
+                 <button type="button" class="btn btn-lg btn-block btn-color step step-4" data-step="5" onclick="sendEvent('#demo-modal-1', 5)">Choose Booking date and time</button>
+                  <button type="button" class="btn btn-lg btn-block btn-color step step-5" data-step="7" onclick="sendEvent('#demo-modal-1', 7)">Enter your Information </button>
+                  <button type="button" class="btn btn-lg btn-block btn-color step step-6" data-step="7" onclick="sendEvent('#demo-modal-1', 7)">Enter Information </button>
+                 <button type="button" class="btn btn-lg btn-block btn-color step step-7" data-step="8" onclick="sendEvent('#demo-modal-1', 8)">Continue </button>
+                  <button type="button" class="btn btn-lg btn-block btn-color step step-8" data-step="9" onclick="sendEvent('#demo-modal-1',9)">Continue</button>
+                    <a  class="back step step-2" data-step="1" onclick="sendEvent('#demo-modal-1', 1)"><span><i class="fa fa-arrow-circle-o-left" style="font-size:24px;margin-right:10px;margin-left:10px;"></i></span></a>
+                     <a class="back step step-3" data-step="2" onclick="sendEvent('#demo-modal-1', 2)"><span><i class="fa fa-arrow-circle-o-left" style="font-size:24px;margin-right:10px;margin-left:10px;"></i></span></a>
+                     <a class="back step step-4" data-step="3" onclick="sendEvent('#demo-modal-1', 3)"><span><i class="fa fa-arrow-circle-o-left" style="font-size:24px;margin-right:10px;margin-left:10px;"></i></span></a>
+                     <a class="back step step-5" data-step="4" onclick="sendEvent('#demo-modal-1', 4)"><span><i class="fa fa-arrow-circle-o-left" style="font-size:24px;margin-right:10px;margin-left:10px;"></i></span></a>
+                    <a class="back step step-6" data-step="5" onclick="sendEvent('#demo-modal-1', 5)"><span><i class="fa fa-arrow-circle-o-left" style="font-size:24px;margin-right:10px;margin-left:10px;"></i></span></a>
+                    <a class="back step step-7" data-step="5" onclick="sendEvent('#demo-modal-1', 5)"><span><i class="fa fa-arrow-circle-o-left" style="font-size:24px;margin-right:10px;margin-left:10px;"></i></span></a>
+                    <a class="back step step-8" data-step="7" onclick="sendEvent('#demo-modal-1', 7)"><span><i class="fa fa-arrow-circle-o-left" style="font-size:24px;margin-right:10px;margin-left:10px;"></i></span></a>
+                    <a class="back step step-9" data-step="8" onclick="sendEvent('#demo-modal-1', 8)"><span><i class="fa fa-arrow-circle-o-left" style="font-size:24px;margin-right:10px;margin-left:10px;"></i></span></a>
+            </div>
+        </div>
+    </div>
+</form>
+</div> <!-- Footer start -->
+<footer class="footer">
+   <div class="container footer-inner">
+      <div class="row">
+         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-item">
+               <h4>Contact Us</h4>
+               <ul class="contact-info">
+                  <li>
+                     Address: V-25/8 DLF Phase 3 near moulsari arcade sec-24,Gurgaon 122002
+                  </li>
+                  <li>
+                     Email: <a href="#">info@rebuilt.co.in</a>
+                  </li>
+                  <li>
+                     Mobile No: <a href="#">+918929555400</a>
+                  </li>
+                  <li>
+                     WhatsApp: +919896593029
+                  </li>
+               </ul>
+               <ul class="social-list clearfix">
+                  <li><a target="_blank" href="https://www.facebook.com/ReBuilt.India/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                  <!-- <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li> -->
+                  <li><a target="_blank"  href="https://www.linkedin.com/company/rebuilt" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                   <li><a target="_blank"  href="http://www.instagram.com/rebuilt_india/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-item">
+               <h4>
+                  Useful Links
+               </h4>
+               <ul class="links">
+                  <li>
+                     <a href="https://www.rebuilt.co.in/Home/About-us"><i class="fa fa-angle-right"></i>About us</a>
+                  </li>
+                 
+                  <li>
+                     <a href="https://www.rebuilt.co.in/Home/Price-list"><i class="fa fa-angle-right"></i>Prices</a>
+                  </li>
+                   <li>
+                     <a href="https://www.rebuilt.co.in/Home/privacy-policy"><i class="fa fa-angle-right"></i>Privacy-policy</a>
+                  </li>
+                  <li>
+                     <a href="https://www.rebuilt.co.in/Home/term-condition"><i class="fa fa-angle-right"></i>Terms & Condition</a>
+                  </li>
+                  <li>
+                     <a href="https://www.rebuilt.co.in/Home/Contact-us"><i class="fa fa-angle-right"></i>Contact us</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-item">
+               <h4>
+                  Our Areas
+               </h4>
+               <ul class="links">
+                                   <li>
+                     <a href="#" class="footer_area_rb" data-area-id="8"><i class="fa fa-angle-right"></i>Roorkee</a>
+                  </li>
+                                    <li>
+                     <a href="#" class="footer_area_rb" data-area-id="7"><i class="fa fa-angle-right"></i>Delhi</a>
+                  </li>
+                                    <li>
+                     <a href="#" class="footer_area_rb" data-area-id="6"><i class="fa fa-angle-right"></i>Dehradun</a>
+                  </li>
+                                    <li>
+                     <a href="#" class="footer_area_rb" data-area-id="5"><i class="fa fa-angle-right"></i>Rohtak</a>
+                  </li>
+                                    <li>
+                     <a href="#" class="footer_area_rb" data-area-id="3"><i class="fa fa-angle-right"></i>Faridabad</a>
+                  </li>
+                                    <li>
+                     <a href="#" class="footer_area_rb" data-area-id="2"><i class="fa fa-angle-right"></i>Noida</a>
+                  </li>
+                                    <li>
+                     <a href="#" class="footer_area_rb" data-area-id="1"><i class="fa fa-angle-right"></i>Gurgaon</a>
+                  </li>
+                                 </ul>
+            </div>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-item clearfix">
+               <h4>Subscribe</h4>
+               <div class="Subscribe-box">
+                  <p></p>
+                  <form action="#" method="GET">
+                     <p>
+                        <input type="text" class="form-contact" name="email" placeholder="Enter Address">
+                     </p>
+                     <p>
+                        <button type="submit" name="submitNewsletter" class="btn btn-block btn-color">
+                        Subscribe
+                        </button>
+                     </p>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-xl-6">
+            <p class="copy">
+               &copy;  2019 
+               <a href="#" target="_blank">
+                  Rebuilt India Pvt. Ltd.
+            </p>
+         </div>
+         <div class="col-xl-6">
+         <p class="copy"><span> <a href="">Privacy-Policy  </a></span><span>|</span><span><a href="">Terms & Condition</span></p>
+         </div>
+      </div>
+   </div>
+</footer>
+<!-- Footer end -->
+<!-- External JS libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>        
+<script src="https://www.rebuilt.co.in/assets/template/js/jquery-2.2.0.min.js"></script>
+
+<script src="https://www.rebuilt.co.in/assets/template/js/popper.min.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/jquery.selectBox.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/rangeslider.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/jquery.magnific-popup.min.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/jquery.filterizr.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/wow.min.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/backstretch.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/jquery.countdown.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/jquery.scrollUp.js"></script>
+<!---<script src="https://www.rebuilt.co.in/assets/template/js/particles.min.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/typed.min.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/dropzone.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/jquery.mb.YTPlayer.js"></script>----->
+<script src="https://www.rebuilt.co.in/assets/template/js/leaflet.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/leaflet-providers.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/leaflet.markercluster.js"></script>
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src='https://www.rebuilt.co.in/assets/template/js/select2.min.js'></script>
+
+<script src="https://www.rebuilt.co.in/assets/template/js/slick.min.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/bootstrap1.min.js"></script>
+
+<!-- <script src="https://www.rebuilt.co.in/assets/template/js/bootstrap-datetimepicker.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="https://www.rebuilt.co.in/assets/template/js/multi-step-modal.js"></script>
+<script type='text/javascript' src="https://www.rebuilt.co.in/resources/js/rb_cpro.js"></script>
+<!-- Custom JS Script -->
+
+
+
+<script type="text/javascript" src="https://www.rebuilt.co.in/assets/template/js/app-code.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/multislider.min.js"></script> 
+
+
+<script>
+    var Settings={
+             base_url: "https://www.rebuilt.co.in/"
+        }
+        
+           function doSticky()
+    {
+        if ($(document).scrollTop() > 40) {
+            $('.do-sticky').addClass('sticky-header');
+            //$('.do-sticky').addClass('header-shrink');
+        }
+        else {
+            $('.do-sticky').removeClass('sticky-header');
+            //$('.do-sticky').removeClass('header-shrink');
+        }
+    }
+        function adjustHeader()
+    {
+        var windowWidth = $(window).width();
+        if(windowWidth > 992) {
+            if ($(document).scrollTop() >= 100) {
+                if($('.header-shrink').length < 1) {
+                    $('.sticky-header').addClass('header-shrink');
+                }
+                if($('.do-sticky').length < 1) {
+                    $('.logo img').attr('src', Settings.base_url+'assets/template/img/logos/black-logo.png');
+                }
+            }
+            else {
+                $('.sticky-header').removeClass('header-shrink');
+                if($('.do-sticky').length < 1) {
+                    $('.logo img').attr('src', Settings.base_url+'assets/template/img/logos/black-logo.png');
+                }
+            }
+        } else {
+            $('.logo img').attr('src', Settings.base_url+'assets/template/img/logos/black-logo.png');
+        }
+    }
+    
+      // Megamenu activation
+    $(".megamenu").on("click", function (e) {
+        e.stopPropagation();
+    });
+    
+         // Header shrink while page scroll
+    adjustHeader();
+    doSticky();
+    $(window).on('scroll', function () {
+        adjustHeader();
+        doSticky();
+    });
+ // Dropdown activation
+    $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+        
+        if (!$(this).next().hasClass('show')) {
+            $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+        }
+        var $subMenu = $(this).next(".dropdown-menu");
+        $subMenu.toggleClass('show');
+
+
+        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+            $('.dropdown-submenu .show').removeClass("show");
+        });
+
+        return false;
+    });
+      $(document).ready(function(){
+        $(".navbar-toggler").on("click",function(e){
+            $(this).next().toggle("show"); 
+        });
+        
+         $(".megamenu-li a.dropdown-toggle").on("click",function(e){
+            $(this).next().toggle("show"); 
+        });
+        
+    });
+
+       $('#home_rb_area').select2({
+            width: "100%",
+            height:"40px",
+            templateResult: formatloc,
+            templateSelection: function (option) {
+                if (option.id.length > 0 ) {
+                    return option.text;
+                } else {
+                    return option.text;
+                }
+            },
+            escapeMarkup: function (m) {
+              return m;
+            }
+  });
+
+    function format (option) {
+        if (!option.id) { return option.text; }
+        a=$(option.element).attr("data-image");
+
+        var ob = option.text + '<img src="'+a+'" width="20px"  hspace="20px" height="20px"/>'; // replace image source with option.img (available in JSON)
+        return ob;
+    };
+    function formatloc (option) {
+        if (!option.id) { return option.text; }
+      
+        var ob ="<i class='fa fa-map-marker'></i>&nbsp;&nbsp;&nbsp;"+option.text ; // replace image source with option.img (available in JSON)
+        return ob;
+    };
+    
+  $("#rb_app_name").select2({
+      width: "100%",
+      height:"40px",
+      templateResult: format,
+      templateSelection: function (option) {
+          if (option.id.length > 0 ) {
+              return option.text;
+          } else {
+              return option.text;
+          }
+      },
+      escapeMarkup: function (m) {
+        return m;
+      }
+  });
+ 
+</script>
+
+</body>
+</html>
+
+
+<script>
+    // appliances services : sidebar fixed on scroll
+(function($) {
+          $(function() {
+
+              var sidebar = $('.user-profile-box');
+              var top = sidebar.offset().top - parseFloat(sidebar.css('margin-top'));
+              var intro_section=$(".intro-section");
+
+              $(window).scroll(function (event) {
+               var height=sidebar.height();
+                var y = $(this).scrollTop();
+                if (y >= top && (y+height)<intro_section.offset().top) {
+                  sidebar.css({position:"fixed"});
+                  sidebar.addClass("width_sidebar");
+                } else {
+                      sidebar.css({position:"relative","width":"100%"});
+                       sidebar.removeClass("width_sidebar");
+                }
+              });
+              
+                  // smooth scroll
+               $("div.user-profile-box .detail a").on('click', function(event) {
+
+                 $("div.user-profile-box .detail a").removeClass("active_color");
+                  $(this).addClass("active_color");
+
+                  // Make sure this.hash has a value before overriding default behavior
+                  if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                      scrollTop: $(hash).offset().top
+                    }, 800, function(){
+
+                      // Add hash (#) to URL when done scrolling (default click behavior)
+                      window.location.hash = hash;
+                    });
+                  } // End if
+                });
+
+                $(window).scroll(function(){
+               var y = $(this).scrollTop();
+               if (y > 100) {
+                     $(".st1").css("display","none");
+                     $(".header_style_1").css("width","100%");
+                  } else {
+                     $(".header_style_1").css("position","relative");
+               }
+            });
+     });
+  })(jQuery);
+</script>
+<script>   
+     var Settings={
+             base_url: "https://www.rebuilt.co.in/"
+        }
+      $('#basicSlider').multislider({
+               continuous: true,
+               duration: 2000
+      });
+      $('#mixedSlider').multislider({
+         duration: 750,
+         interval: 3000
+      });
+</script>

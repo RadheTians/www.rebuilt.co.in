@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zxx">
+   <head>
+      <title>Rebuilt</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <!-- External CSS libraries -->
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/bootstrap.min.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/magnific-popup.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/jquery.selectBox.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/dropzone.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/animate.min.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/leaflet.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/slick.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/jquery.mCustomScrollbar.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/fonts/font-awesome/css/font-awesome.min.css">
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/fonts/flaticon/font/flaticon.css">
+      <!-- Favicon icon -->
+      <link rel="shortcut icon"href="https://www.rebuilt.co.in/assets/template/img/favicon.png" >
+      <!-- Google fonts -->
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPoppins:400,500,700,800,900%7CRoboto:100,300,400,400i,500,700">
+      <!-- Custom Stylesheet -->
+      <link type="text/css" rel="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/style.css">
+      <link rel="stylesheet" type="text/css" id="stylesheet"href="https://www.rebuilt.co.in/assets/template/css/skins/default.css">
+      
+      <link rel="stylesheet" href="https://www.rebuilt.co.in/assets/template/css/megamenu-style.css"/>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+      <style>
+         p,select,input,p,span,li,u,textarea,h6{
+            font-size:14px;
+         }
+         .rb-loader {
+           border: 16px solid #f3f3f3;
+           border-radius: 50%;
+           border-top: 16px solid #3498db;
+           width: 60px;
+           position:fixed;
+           left : 50%;
+            top : 50%;
+           z-index:99999;
+            margin:0px auto;
+            display: none;
+            background-position:center;
+           height: 60px;
+           -webkit-animation: spin 2s linear infinite; /* Safari */
+           animation: spin 2s linear infinite;
+         }
+
+         /* Safari */
+         @-webkit-keyframes spin {
+           0% { -webkit-transform: rotate(0deg); }
+           100% { -webkit-transform: rotate(360deg); }
+         }
+
+         @keyframes spin {
+           0% { transform: rotate(0deg); }
+           100% { transform: rotate(360deg); }
+         }
+        li.drop-down ul{
+          display:none;
+        }
+        li.drop-down:hover ul{
+          display:block;
+          position: relative;
+          z-index:999;
+        }
+        li.drop-down{
+          width:118px;
+        }
+        ul.dropdown-submenu li a,ul.dropdown-submenu li,ul.dropdown li,ul.dropdown li a{
+          background:#212529 !important;
+          color:#fff !important;
+        }
+        li.drop-down ul li ul.dropdown-submenu{
+            display: none;
+        }
+        li.drop-down ul li:hover ul.dropdown-submenu{
+            display: block;
+            position: relative;
+            left: 107%;
+            bottom: 24px;
+        }
+        li.drop-down ul li>ul.dropdown-submenu li{
+          max-height:40px;
+        }
+        li.drop-down>ul>li {
+          padding:6px 12px !important;
+          line-height:1em;
+          max-height:40px;
+        }
+        li.drop-down:hover ul li{
+          background: blue;
+          max-height:40px;
+        }
+        li.drop-down:hover ul li{
+          background: white;
+          color:black;
+        
+          padding:6px 8px;
+          width:200px;
+          border-bottom: 1px solid #cdcdcd !important;
+          padding:6px 12px !important;
+
+        }
+        li.drop-down:hover{
+          height:20px;
+        }
+
+      </style>
+       <script>
+         function gen_tkn_nm()
+         {
+            var  csrfName = "csrf_rbuilt_access_token";
+            return csrfName;
+            
+         }
+         function gen_tkn_hsh() {
+
+           var  csrfHash = "e0e0deed014cd88ff9afe5fe2c1b8718";
+           return csrfHash;
+         
+         }
+      </script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141289615-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141289615-1');
+</script>
+   </head>
+   <body id="top">
+      <div class="rb-loader"></div>
+
+      <!-- Top header start -->
+      <header class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="list-inline">
+                     <a href="https://wa.me/9896593029" target="blank"><i class="fa fa-whatsapp"></i>9896593029</a>
+                     <a href="tel:8929555400" target="_blank"><i class="fa fa-phone"></i>8929555400</a>
+                     
+                     <a href="mailto:info@rebuilt.co.in" target="_blank"><i class="fa fa-envelope"></i>info@rebuilt.co.in</a>
+                  </div>
+               </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                     <ul class="top-social-media pull-right">
+                        <li>
+                           <a target="_blank" href="https://www.facebook.com/ReBuilt.India/" class="facebook"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                           <a target="_blank" href="https://www.linkedin.com/company/rebuilt" class="linkedin"><i class="fa fa-linkedin"></i> </a>
+                        </li>
+                         <li>
+                           <a target="_blank" href="http://www.instagram.com/rebuilt_india/" class="instagram"><i class="fa fa-instagram"></i> </a>
+                        </li>
+                        <li>
+                           <a href="#">/</a>
+                        </li>
+   					              <li>
+                           <a href="https://www.rebuilt.co.in/Home/partner-register" class="sign-in"> BECOME A PROFESSIONAL</a>
+                        </li>
+   					            <li>
+                           <a href="#">/</a>
+                        </li>
+                                                <li>
+                           <a href="https://www.rebuilt.co.in/Home/Login" class="sign-in"><i class="fa fa-sign-in"></i> Login / Sign up </a>
+                        </li>
+                       <!--  <li>
+                           <a href="https://www.rebuilt.co.in/Home/Register" class="sign-in"><i class="fa fa-user"></i> Register</a>
+                        </li> -->
+                                             </ul>
+                  </div>
+            </div>
+         </div>
+      </header>
+      <!-- Top header end -->
+      <!-- main header start -->
+      <header class="main-header do-sticky" id="main-header-2">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <nav class="navbar navbar-expand-lg navbar-light rounded">
+                     <a class="navbar-brand logo" href="https://www.rebuilt.co.in/">
+                     <img src="https://www.rebuilt.co.in/assets/template/img/logos/black-logo.png" alt="logo">
+                     </a>
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="fa fa-bars"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbar">
+
+                        <ul class="navbar-nav ml-auto">
+                           <li class="nav-item dropdown">
+                              <a class="nav-link " href="https://www.rebuilt.co.in/">
+                              Home
+                              </a>
+                           </li>
+                           <li class="nav-item dropdown">
+                              <a class="nav-link " href="https://www.rebuilt.co.in/Home/About-us">
+                              About Us
+                              </a>
+                           </li>
+
+                           <li class="drop-down">
+                              <a class="nav-link" href="#">Services</a>
+                              
+                                 <ul class="dropdown">
+                                                                          
+                                                                                            
+                                                <li class="subs">
+                                                    <a class="dropdown-item" href="https://www.rebuilt.co.in/Home/Appliance/Geyser/Gurgaon">  
+                                                     Geyser                                                   </a>
+                                                </li>
+                                                                                                                                        
+                                                <li class="subs">
+                                                    <a class="dropdown-item" href="https://www.rebuilt.co.in/Home/Appliance/Refrigerator/Gurgaon">  
+                                                     Refrigerator                                                   </a>
+                                                </li>
+                                                                                                                                        
+                                                <li class="subs">
+                                                    <a class="dropdown-item" href="https://www.rebuilt.co.in/Home/Appliance/Microwave+%26+Oven/Gurgaon">  
+                                                     Microwave & Oven                                                   </a>
+                                                </li>
+                                                                                                                                        
+                                                <li class="subs">
+                                                    <a class="dropdown-item" href="https://www.rebuilt.co.in/Home/Appliance/RO+or+Water+Purifier/Gurgaon">  
+                                                     RO or Water Purifier                                                   </a>
+                                                </li>
+                                                                                                                                        
+                                                <li class="subs">
+                                                    <a class="dropdown-item" href="https://www.rebuilt.co.in/Home/Appliance/Washing+Machine/Gurgaon">  
+                                                     Washing Machine                                                   </a>
+                                                </li>
+                                                                                                                                        
+                                                <li class="subs">
+                                                    <a class="dropdown-item" href="https://www.rebuilt.co.in/Home/Appliance/A.C/Gurgaon">  
+                                                     A.C                                                   </a>
+                                                </li>
+                                                                                                                                        
+                                                <li class="subs">
+                                                    <a class="dropdown-item" href="https://www.rebuilt.co.in/Home/Appliance/T.V/Gurgaon">  
+                                                     T.V                                                   </a>
+                                                </li>
+                                                                                                                                
+                                                                </ul>
+
+                            </li>
+                            
+                              <!-- <li class="nav-item dropdown">
+                                <a class="nav-link " href="https://www.rebuilt.co.in/Home/Price-list">Prices </a>
+                              </li> -->
+                           <li class="nav-item dropdown">
+                              <a class="nav-link " href="https://www.rebuilt.co.in/Home/Offers">
+                              Offer
+                              </a>
+                           </li>
+						   
+						                <li class="nav-item dropdown">
+                              <a class="nav-link " href="https://www.rebuilt.co.in/Home/Career">
+                              Career
+                              </a>
+                           </li>
+						                <li class="nav-item dropdown">
+                              <a class="nav-link " href="https://www.rebuilt.co.in/Home/Blog">
+                              Blog
+                              </a>
+                           </li>
+                           <li class="nav-item dropdown">
+                              <a class="nav-link " href="https://www.rebuilt.co.in/Home/Contact-us">
+                              Contact US
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- main header end -->
+<script type="text/javascript">
+
+</script><style>
+    .validate_error p{
+        color:Red;
+
+    }
+    .form-group,.contact-2 .form-control{
+        color: black;
+    }
+</style>
+<!-- Sub banner start -->
+<div class="sub-banner2 overview-bgi">
+    <div class="container">
+        <div class="breadcrumb-area">
+            <h1>Blog</h1>
+            <ul class="breadcrumbs">
+                <li><a href="https://www.rebuilt.co.in/">Home</a></li>
+                <li class="active">Blog</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub banner end -->
+<!-- Blog section start -->
+<div class="blog-section content-area-7">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12">
+                <div class="sidebar mrb">
+                    <!-- Recent posts start -->
+                    <div class="widget recent-posts">
+                        <h5 class="sidebar-title">Recent Blogs</h5>
+                                                <div class="media mb-4">
+                            <a href="#">
+                                <img src="https://www.rebuilt.co.in/assets/blog/images/1565582837-ro.jpg" alt="Blog">
+                            </a>
+                            <div class="media-body align-self-center">
+                                <h5>
+                                    <a href="https://www.rebuilt.co.in/Home/blog_instant/7">HOW TO KNOW WHEN YOUR WATER PURIFIER NEEDS TO GET SERVICED</a>
+                                </h5>
+                                <p>2019-08-12 04:07:17</p>
+                            </div>
+                        </div>
+                                            <div class="media mb-4">
+                            <a href="#">
+                                <img src="https://www.rebuilt.co.in/assets/blog/images/1558638569-shutterstock_375472924-1.jpg" alt="Blog">
+                            </a>
+                            <div class="media-body align-self-center">
+                                <h5>
+                                    <a href="https://www.rebuilt.co.in/Home/blog_instant/4">10 Essential Tips to Take Care of Your Washing Machine</a>
+                                </h5>
+                                <p>2019-05-23 21:09:29</p>
+                            </div>
+                        </div>
+                                            <div class="media mb-4">
+                            <a href="#">
+                                <img src="https://www.rebuilt.co.in/assets/blog/images/1558638489-shutterstock_616567397-tender-1-768x512.jpg" alt="Blog">
+                            </a>
+                            <div class="media-body align-self-center">
+                                <h5>
+                                    <a href="https://www.rebuilt.co.in/Home/blog_instant/3">5 Tips to Maintain Your Washing Machine And Making It Last Longer</a>
+                                </h5>
+                                <p>2019-05-23 21:08:09</p>
+                            </div>
+                        </div>
+                                            <div class="media mb-4">
+                            <a href="#">
+                                <img src="https://www.rebuilt.co.in/assets/blog/images/1558638354-blog-1.jpg" alt="Blog">
+                            </a>
+                            <div class="media-body align-self-center">
+                                <h5>
+                                    <a href="https://www.rebuilt.co.in/Home/blog_instant/2">How to Buy the Best Washing Machine for Your Home</a>
+                                </h5>
+                                <p>2019-05-23 21:05:54</p>
+                            </div>
+                        </div>
+                                     
+                    </div>
+                    <!-- Tags start -->
+                    <div class="widget tags clearfix">
+                        <h5 class="sidebar-title">Tags</h5>
+                        <ul class="tags">
+                            <li><a href="#">Ac Repair</a></li>
+                            <li><a href="#">Refrigrator Repair</a></li>
+                            <li><a href="#">TV Repair</a></li>
+                            <li><a href="#">Geyser Repair</a></li>
+                            <li><a href="#">RO Repair</a></li>
+                            <li><a href="#">Microwave Repair</a></li>
+                            <li><a href="#">Washing Machine Repair</a></li>
+                            <li><a href="#">Oven Repair</a></li>
+                        </ul>
+                    </div>
+                    <!-- Recent comments start -->
+                   <!--  <div class="widget recent-comments">
+                        <h5 class="sidebar-title">Recent comments</h5>
+                        <div class="media mb-4">
+                            <a class="pr-3" href="#">
+                                <img src="assets/template/img/blog/avatar-13.jpg" class="rounded-circle" alt="avatar">
+                            </a>
+                            <div class="media-body">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <p>By <span>John Doe</span></p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <a class="pr-3" href="#">
+                                <img src="assets/template/img/blog/avatar-13.jpg" class="rounded-circle" alt="avatar">
+                            </a>
+                            <div class="media-body">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <p>By <span>Karen Paran</span></p>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Latest start -->
+                   <!--  <div class="widget latest-tweet">
+                        <h5 class="sidebar-title">Latest Tweet</h5>
+                        <P><a href="#">Lorem Ipsum is simply</a> dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text,</P>
+                        <p>@Lorem ipsum dolor<a href="#">sit amet, consectetur</a> adipiscing elit. Aenean id dignissim justo. Maecenas urna lacus,</p>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <!-- Blog grid box start -->
+                                <div class="blog-1">
+                                                            <img class="blog-theme img-fluid" src="https://www.rebuilt.co.in/assets/blog/images/1565582837-ro.jpg" alt="Blog">
+                    <div class="detail">
+                       <h2><a href="blog-single-sidebar-right.html">HOW TO KNOW WHEN YOUR WATER PURIFIER NEEDS TO GET SERVICED</a></h2>
+                        <div class="post-meta">
+                            <span><a href="#"><i class="fa fa-user"></i>Anil suri</a></span>
+                            <span><a><i class="fa fa-clock-o"></i>July 20</a></span>
+                            <span><a href="#"><i class="fa fa-commenting-o"></i>24 Comment</a></span>
+                        </div>
+
+                            <h1><span style="font-size:18px"><span style="font-family:Arial,Helvetica,sans-serif">HOW TO KNOW WHEN YOUR WATER PURIFIER NEEDS TO GET SERVICED</span></span><br />
+<span style="font-size:14px"><span style="font-family:Arial,Helvetica,sans-serif">Water is the most important natural resource that the human beings have. We need water for our day to day activities but the most important use of water is to satisfy our thirst. Our body needs this natural resource, and the body that we are talking about is itself made up of around 70% water.</span></span></h1>
+
+<h2 style="font-style:italic"><span style="font-size:14px"><span style="font-family:Arial,Helvetica,sans-serif">And when we talk about drinking water, then we need to get the water that has the right ph level, consist of minerals, is colourless, has no smell in it and many more of such requirements. These requirements are met by water purifier and this blog is all about when to know that your water purifier or UV RO water purifier needs to get serviced irrespective of the price of water purifier.</span></span></h2>
+
+<h2 style="font-style:italic"><span style="font-size:14px"><span style="font-family:Arial,Helvetica,sans-serif">Different parts of water purifier have different life. Hence, they are needed to change at different intervals of time. These parts are -</span></span></h2>
+
+<h1><span style="font-size:18px"><span style="font-family:Arial,Helvetica,sans-serif">SEDIMENT FILTER</span></span></h1>
+
+<h2 style="font-style:italic"><span style="font-size:14px"><span style="font-family:Arial,Helvetica,sans-serif">Maintaining your sediment filter is very important. It helps you drain out the sediment, dirt and other impurities. A clean sediment filter protects the RO membranes from dirt. If you don&rsquo;t change this filter, the dirt will reach the membrane and contaminate the water that passes through it. This filter should be changed at least once a year.</span></span></h2>
+
+<h1><span style="font-size:18px"><span style="font-family:Arial,Helvetica,sans-serif">RO MEMBERANE</span></span></h1>
+
+<h2 style="font-style:italic"><span style="font-size:18px"><span style="font-family:Arial,Helvetica,sans-serif">The membrane of the RO system is semi-permeable. These membrane helps to eliminate harmful bacteria and viruses from the water. The replacement schedule will be based on the consumption of water in your household. On an average it should be changed within every 6 months for a water purifier in India. </span></span></h2>
+
+<h1><span style="font-size:18px"><span style="font-family:Arial,Helvetica,sans-serif">CARBON FILTER</span></span></h1>
+
+<h2 style="font-style:italic"><span style="font-size:14px"><span style="font-family:Arial,Helvetica,sans-serif">The carbon filter helps remove chlorine and other harmful contaminants. It is also responsible for removing all sorts of odours from the water. Get your carbon filter replaced at least once in a year.</span></span></h2>
+
+<h2 style="font-style:italic"><span style="font-size:14px"><span style="font-family:Arial,Helvetica,sans-serif">Also, there are some things that you need to check regardless of whether your water purifier needs to get serviced or not. These things are &ndash;</span></span></h2>
+
+<ul>
+	<li>
+	<h2 style="font-style:italic"><span style="font-size:14px"><span style="font-family:Arial,Helvetica,sans-serif">Checking for drips and leakages</span></span></h2>
+	</li>
+	<li>
+	<h2 style="font-style:italic"><span style="font-size:14px"><span style="font-family:Arial,Helvetica,sans-serif">Unpleasant smell from water</span></span></h2>
+	</li>
+	<li>
+	<h2 style="font-style:italic"><span style="font-size:14px"><span style="font-family:Arial,Helvetica,sans-serif">Sour Taste of water</span></span></h2>
+	</li>
+	<li>
+	<h2 style="font-style:italic"><span style="font-size:14px"><span style="font-family:Arial,Helvetica,sans-serif">Output speed of the water (if its decreased, then service is overdue)</span></span></h2>
+	</li>
+</ul>
+
+<h2 style="font-style:italic"><span style="font-size:14px"><span style="font-family:Arial,Helvetica,sans-serif">These are the things that you should keep in mind while looking at your water purifier. Drinking water needs to be pure and should be free of all kinds of contaminants.</span></span></h2>
+
+<h2 style="font-style:italic"><span style="font-size:14px"><span style="font-family:Arial,Helvetica,sans-serif">In our digital world, everything is just a finger tap away and taking just 2 minutes from your hectic schedule for your water purifier is going to be beneficial for your future. Sites like <a href="https://www.rebuilt.co.in" style="color:#0563c1; text-decoration:underline">https://www.rebuilt.co.in</a> and many more like these will help you reduce your burden in this department.</span></span></h2>
+
+<h2 style="font-style:italic">&nbsp;</h2>
+
+<h2 style="font-style:italic">&nbsp;</h2>
+
+<h2 style="font-style:italic">&nbsp;</h2>
+                        <div class="row clearfix tags-socal-box">
+                       
+                        </div>
+                    </div>
+                </div>
+                                <!-- Blog grid box end -->
+                 <!-- Comments section end -->
+
+                <!-- Contact-2 start -->
+                <div class="contact-2">
+                    <h2>Leave a Comment</h2> 
+                    <div class="container">
+                       <!--  <div class="row">
+                            <div class="col-md-12">
+                                <p class="alert">
+                                                                    </p>
+                            </div>
+                        </div> -->
+                        <div class="row">
+                            <form action="https://www.rebuilt.co.in/Blog/Comment/7" method="post" accept-charset="utf-8">
+<input type="hidden" name="csrf_rbuilt_access_token" value="e0e0deed014cd88ff9afe5fe2c1b8718" />                                                  
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <div class="form-group name">
+                                           
+                                            <input type="text" name="name" value="" class="form-control" placeholder="Name">
+                                             <span class='validate_error'></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <div class="form-group email">
+                                           
+                                            <input type="email" name="email" value=""class="form-control" placeholder="Email">
+                                           <span class='validate_error'>  </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="form-group message">
+                                           
+                                            <textarea class="form-control" value=""name="message" placeholder="Write message"></textarea>
+                                            <span class='validate_error'> </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="send-btn">
+                                            <button type="submit" class="btn btn-color btn-md btn-message">Send Message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>                        </div>
+                    </div>
+                </div>
+                <!-- Contact-2 end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Blog section end -->
+<!-- Footer start -->
+<footer class="footer">
+   <div class="container footer-inner">
+      <div class="row">
+         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-item">
+               <h4>Contact Us</h4>
+               <ul class="contact-info">
+                  <li>
+                     Address: V-25/8 DLF Phase 3 near moulsari arcade sec-24,Gurgaon 122002
+                  </li>
+                  <li>
+                     Email: <a href="#">info@rebuilt.co.in</a>
+                  </li>
+                  <li>
+                     Mobile No: <a href="#">+918929555400</a>
+                  </li>
+                  <li>
+                     WhatsApp: +919896593029
+                  </li>
+               </ul>
+               <ul class="social-list clearfix">
+                  <li><a target="_blank" href="https://www.facebook.com/ReBuilt.India/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                  <!-- <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li> -->
+                  <li><a target="_blank"  href="https://www.linkedin.com/company/rebuilt" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                   <li><a target="_blank"  href="http://www.instagram.com/rebuilt_india/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-item">
+               <h4>
+                  Useful Links
+               </h4>
+               <ul class="links">
+                  <li>
+                     <a href="https://www.rebuilt.co.in/Home/About-us"><i class="fa fa-angle-right"></i>About us</a>
+                  </li>
+                 
+                  <li>
+                     <a href="https://www.rebuilt.co.in/Home/Price-list"><i class="fa fa-angle-right"></i>Prices</a>
+                  </li>
+                   <li>
+                     <a href="https://www.rebuilt.co.in/Home/privacy-policy"><i class="fa fa-angle-right"></i>Privacy-policy</a>
+                  </li>
+                  <li>
+                     <a href="https://www.rebuilt.co.in/Home/term-condition"><i class="fa fa-angle-right"></i>Terms & Condition</a>
+                  </li>
+                  <li>
+                     <a href="https://www.rebuilt.co.in/Home/Contact-us"><i class="fa fa-angle-right"></i>Contact us</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-item">
+               <h4>
+                  Our Areas
+               </h4>
+               <ul class="links">
+                                   <li>
+                     <a href="#" class="footer_area_rb" data-area-id="8"><i class="fa fa-angle-right"></i>Roorkee</a>
+                  </li>
+                                    <li>
+                     <a href="#" class="footer_area_rb" data-area-id="7"><i class="fa fa-angle-right"></i>Delhi</a>
+                  </li>
+                                    <li>
+                     <a href="#" class="footer_area_rb" data-area-id="6"><i class="fa fa-angle-right"></i>Dehradun</a>
+                  </li>
+                                    <li>
+                     <a href="#" class="footer_area_rb" data-area-id="5"><i class="fa fa-angle-right"></i>Rohtak</a>
+                  </li>
+                                    <li>
+                     <a href="#" class="footer_area_rb" data-area-id="3"><i class="fa fa-angle-right"></i>Faridabad</a>
+                  </li>
+                                    <li>
+                     <a href="#" class="footer_area_rb" data-area-id="2"><i class="fa fa-angle-right"></i>Noida</a>
+                  </li>
+                                    <li>
+                     <a href="#" class="footer_area_rb" data-area-id="1"><i class="fa fa-angle-right"></i>Gurgaon</a>
+                  </li>
+                                 </ul>
+            </div>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-item clearfix">
+               <h4>Subscribe</h4>
+               <div class="Subscribe-box">
+                  <p></p>
+                  <form action="#" method="GET">
+                     <p>
+                        <input type="text" class="form-contact" name="email" placeholder="Enter Address">
+                     </p>
+                     <p>
+                        <button type="submit" name="submitNewsletter" class="btn btn-block btn-color">
+                        Subscribe
+                        </button>
+                     </p>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-xl-6">
+            <p class="copy">
+               &copy;  2019 
+               <a href="#" target="_blank">
+                  Rebuilt India Pvt. Ltd.
+            </p>
+         </div>
+         <div class="col-xl-6">
+         <p class="copy"><span> <a href="">Privacy-Policy  </a></span><span>|</span><span><a href="">Terms & Condition</span></p>
+         </div>
+      </div>
+   </div>
+</footer>
+<!-- Footer end -->
+<!-- External JS libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>        
+<script src="https://www.rebuilt.co.in/assets/template/js/jquery-2.2.0.min.js"></script>
+
+<script src="https://www.rebuilt.co.in/assets/template/js/popper.min.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/jquery.selectBox.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/rangeslider.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/jquery.magnific-popup.min.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/jquery.filterizr.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/wow.min.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/backstretch.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/jquery.countdown.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/jquery.scrollUp.js"></script>
+<!---<script src="https://www.rebuilt.co.in/assets/template/js/particles.min.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/typed.min.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/dropzone.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/jquery.mb.YTPlayer.js"></script>----->
+<script src="https://www.rebuilt.co.in/assets/template/js/leaflet.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/leaflet-providers.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/leaflet.markercluster.js"></script>
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src='https://www.rebuilt.co.in/assets/template/js/select2.min.js'></script>
+
+<script src="https://www.rebuilt.co.in/assets/template/js/slick.min.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/bootstrap1.min.js"></script>
+
+<!-- <script src="https://www.rebuilt.co.in/assets/template/js/bootstrap-datetimepicker.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="https://www.rebuilt.co.in/assets/template/js/multi-step-modal.js"></script>
+<script type='text/javascript' src="https://www.rebuilt.co.in/resources/js/rb_cpro.js"></script>
+<!-- Custom JS Script -->
+
+
+
+<script type="text/javascript" src="https://www.rebuilt.co.in/assets/template/js/app-code.js"></script>
+<script src="https://www.rebuilt.co.in/assets/template/js/multislider.min.js"></script> 
+
+
+<script>
+    var Settings={
+             base_url: "https://www.rebuilt.co.in/"
+        }
+        
+           function doSticky()
+    {
+        if ($(document).scrollTop() > 40) {
+            $('.do-sticky').addClass('sticky-header');
+            //$('.do-sticky').addClass('header-shrink');
+        }
+        else {
+            $('.do-sticky').removeClass('sticky-header');
+            //$('.do-sticky').removeClass('header-shrink');
+        }
+    }
+        function adjustHeader()
+    {
+        var windowWidth = $(window).width();
+        if(windowWidth > 992) {
+            if ($(document).scrollTop() >= 100) {
+                if($('.header-shrink').length < 1) {
+                    $('.sticky-header').addClass('header-shrink');
+                }
+                if($('.do-sticky').length < 1) {
+                    $('.logo img').attr('src', Settings.base_url+'assets/template/img/logos/black-logo.png');
+                }
+            }
+            else {
+                $('.sticky-header').removeClass('header-shrink');
+                if($('.do-sticky').length < 1) {
+                    $('.logo img').attr('src', Settings.base_url+'assets/template/img/logos/black-logo.png');
+                }
+            }
+        } else {
+            $('.logo img').attr('src', Settings.base_url+'assets/template/img/logos/black-logo.png');
+        }
+    }
+    
+      // Megamenu activation
+    $(".megamenu").on("click", function (e) {
+        e.stopPropagation();
+    });
+    
+         // Header shrink while page scroll
+    adjustHeader();
+    doSticky();
+    $(window).on('scroll', function () {
+        adjustHeader();
+        doSticky();
+    });
+ // Dropdown activation
+    $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+        
+        if (!$(this).next().hasClass('show')) {
+            $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+        }
+        var $subMenu = $(this).next(".dropdown-menu");
+        $subMenu.toggleClass('show');
+
+
+        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+            $('.dropdown-submenu .show').removeClass("show");
+        });
+
+        return false;
+    });
+      $(document).ready(function(){
+        $(".navbar-toggler").on("click",function(e){
+            $(this).next().toggle("show"); 
+        });
+        
+         $(".megamenu-li a.dropdown-toggle").on("click",function(e){
+            $(this).next().toggle("show"); 
+        });
+        
+    });
+
+       $('#home_rb_area').select2({
+            width: "100%",
+            height:"40px",
+            templateResult: formatloc,
+            templateSelection: function (option) {
+                if (option.id.length > 0 ) {
+                    return option.text;
+                } else {
+                    return option.text;
+                }
+            },
+            escapeMarkup: function (m) {
+              return m;
+            }
+  });
+
+    function format (option) {
+        if (!option.id) { return option.text; }
+        a=$(option.element).attr("data-image");
+
+        var ob = option.text + '<img src="'+a+'" width="20px"  hspace="20px" height="20px"/>'; // replace image source with option.img (available in JSON)
+        return ob;
+    };
+    function formatloc (option) {
+        if (!option.id) { return option.text; }
+      
+        var ob ="<i class='fa fa-map-marker'></i>&nbsp;&nbsp;&nbsp;"+option.text ; // replace image source with option.img (available in JSON)
+        return ob;
+    };
+    
+  $("#rb_app_name").select2({
+      width: "100%",
+      height:"40px",
+      templateResult: format,
+      templateSelection: function (option) {
+          if (option.id.length > 0 ) {
+              return option.text;
+          } else {
+              return option.text;
+          }
+      },
+      escapeMarkup: function (m) {
+        return m;
+      }
+  });
+ 
+</script>
+
+</body>
+</html>
+
+

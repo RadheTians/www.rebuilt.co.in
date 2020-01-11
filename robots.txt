@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/*
+Disallow: /enable-cookies 
+Disallow: /login/
+Disallow: /https://www.rebuilt.co.in/Home/partner-register 
+ 
+Sitemap: https://www.rebuilt.co.in/sitemap.xml
