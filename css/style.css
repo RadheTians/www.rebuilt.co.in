@@ -59,10 +59,12 @@ img {vertical-align: middle;}
   .text {font-size: 11px}
 }
 
+
+
 .flip-box {
   background-color: transparent;
   width: 500px;
-  height: 300px;
+  height: 400px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
   padding: 2%;
@@ -90,7 +92,7 @@ img {vertical-align: middle;}
 }
 
 .flip-box-front {
-  background-color: #bbb;
+  background-color: white;
   color: black;
 }
 
@@ -101,9 +103,12 @@ img {vertical-align: middle;}
 }
 
 
-.item-style h2,p {
-  
+.item-style h5,p {
   text-align: center;
+}
+
+.item-style h5{
+  margin-top: 5%;
 }
 
 .item-style a:link, a:visited {
