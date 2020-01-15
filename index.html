@@ -28,6 +28,8 @@
 
       <!--My Files-->
       <link href="css/style.css" rel="stylesheet" type="text/css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 
       <!-- <script src="javascript/style.js"></script> -->
     
@@ -493,8 +495,10 @@ background: #000;
             <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
                <div class="carousel-content container">
                   <div class="text-center">
+                     <a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon">
                      <h1 class="typed-text">Book your Service Professional in <span class="rb_cuurent_loc">Gurgaon</span></h1>
                      <p class="typed">Get Best Services at Genuine rates.</p>
+                     </a>
                   </div>
                </div>
             </div>
@@ -712,6 +716,19 @@ background: #000;
   </div>
 </div>
 <!-- end view section -->
+
+<script>
+   function bigImg(x) {
+     x.style.height = "1000px";
+     x.style.width = "1000px";
+   }
+   
+   function normalImg(x) {
+     x.style.height = "320px";
+     x.style.width = "320px";
+   }
+</script>
+   
 <div class="container-fluid content-area-20">
   <div class="row">
     <div class="col-md-12">
@@ -725,7 +742,7 @@ background: #000;
                               <div class="item">
                     <div class="imgTitle">
                         <h6 class="blogTitle">T.V</h6>
-                        <img src="./uploads/appliances/photo/1557340296-tv.png" alt="" />
+                        <img src="./uploads/appliances/photo/1557340296-tv.png" nmouseenter="bigImg(this)" onmouseleave="normalImg(this)" alt="Smiley" >
                     </div>
                    <!--  <a class="btn btn-border btn-sm" href="T.V">Read More</a> -->
                 </div>
@@ -817,39 +834,65 @@ background: #000;
       <p>One step solution for all your home appliance</p>
     </div>	
     <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="col-lg-6 col-md-6 col-sm-12" onmouseover="showTouchItem()" onmouseleave="hideTouchItem()">
         <div class="flip-box">
           <div class="flip-box-inner">
             <div class="flip-box-front">
             
-              <img class="card-img-top img-fluid" src="./assets/template/img/pricing.png" alt="property-2">
-              <ul class="item-style">
+              <img class="card-img-top img-fluid" src="./assets/template/img/pricing.png" alt="property-2" />
               <h5>AC Repairing Service</h5>
               </ul>
               
             </div>
             <div class="flip-box-back">
+            
+                  <div class="top-item-style">
+                        
+                        <img class="img-item-style" src='./uploads/appliances/icons/icon_1558205486-air-conditioner.png' width="20%" height="20%"/>
+                        <div class="vl-line"></div>
+                        <div class="list-item-style">
+                           <h5>AC Repairing Service</h5>
+                           <p>Rebuilt.</p>
+                        </div>
+                  </div>
+               
                
               <ul class="item-style">
-
-               <h5>AC Repairing Service</h5>
-
-               <p>Rebuilt.</p>
                
-               
-               <a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>AC COMMAN REAPIR/SERVICES</a>
+               <li class="hidden"><a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>AC COMMAN REAPIR/SERVICES</a></li>
            
-               <a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>WINDOW AC REAPIR/SERVICES</a>
+               <li class="hidden"><a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>WINDOW AC REAPIR/SERVICES</a></li>
               
-               <a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>SPLIT AC REAPIR/SERVICES</a>
+               <li class="hidden"><a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>SPLIT AC REAPIR/SERVICES</a></li>
               
-               <a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>OTHER AC REAPIR/SERVICES</a>
+               <li class="hidden"><a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>OTHER AC REAPIR/SERVICES</a></li>
 
               </ul>
             </div>
           </div>
         </div>
       </div>
+
+      <script>
+
+         function showTouchItem(){
+            $("ul li.hidden").each(function(i) {
+               $(this).delay(500 * i).queue(function(nxt) {
+                 $(this).removeClass('hidden');
+                 nxt();
+               });
+             });
+         }
+
+         function hideTouchItem(){
+            $("ul li.hidden").each(function(i) {
+               $(this).delay(100 * i).queue(function(nxt) {
+                 $(this).addClass('hidden');
+                 nxt();
+               });
+             });
+         }
+      </script>
 
       <div class="col-lg-6 col-md-6 col-sm-12">
         <div class="flip-box">
@@ -900,6 +943,7 @@ background: #000;
           <div class="flip-box-back">
                
             <ul class="item-style">
+            
 
             <h5>Washing-Machine Repairing Service</h5>
 

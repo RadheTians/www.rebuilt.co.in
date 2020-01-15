@@ -103,12 +103,35 @@ img {vertical-align: middle;}
 }
 
 
-.item-style h5,p {
+.top-item-style{
+  padding-left: 10%;
+  padding-top: 10%;
+    
+}
+.vl-line{
+    border-left: 6px solid white;
+    height: 50px;
+    display:inline-block;
+    padding: 2%;
+  
+}
+.list-item-style{
+  
+  display:inline-block;
   text-align: center;
 }
 
-.item-style h5{
-  margin-top: 5%;
+.list-item-style h5,p{
+  color: white;
+}
+
+.img-item-style{
+  display:inline-block;
+  padding: 10px 20px;
+}
+
+.hidden {
+  display: none;
 }
 
 .item-style a:link, a:visited {
@@ -121,7 +144,7 @@ img {vertical-align: middle;}
 
 
 .checked {
-  color: rgb(0, 255, 200);
+  color: white;
   padding: 5px 25px;
 
 }
