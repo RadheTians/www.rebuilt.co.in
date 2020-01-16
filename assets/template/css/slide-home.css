@@ -106,7 +106,7 @@ width: 61%;
 #mixedSlider {
   //position: relative;
 }
-#mixedSlider .MS-content {
+#mixedSlider  {
   white-space: nowrap;
   overflow: hidden;
   margin: 0 5%;
