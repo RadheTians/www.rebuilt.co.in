@@ -27,11 +27,19 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
 
       <!--My Files-->
-      <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+      <script src="javascript/jquery-3.2.1.min.js"></script>
+      
+      <script src="javascript/owl.carousel.min.js"></script> 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="javascript/style.js"></script>
+    
+      <link href="css/style.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      
+      <link rel="stylesheet" href="css/owl.carousel.css">
 
-
-      <!-- <script src="javascript/style.js"></script> -->
+      
     
 
       <style>
@@ -720,7 +728,7 @@ background: #000;
 <script>
    function bigImg(x) {
      x.style.height = "120px";
-     x.style.width = "220px";
+     x.style.width = "250px";
    }
    
    function normalImg(x) {
@@ -801,13 +809,10 @@ background: #000;
 </div>
 
 
-
+<!-- 
 
    <div class="container">
-      <div class="main-title">
-          <h1>Customer Reviews</h1>
-         <p>Guaranteed high quality repair services under one roof</p>
-      </div>
+     
 
       <div class="Slides fade">
          
@@ -844,9 +849,7 @@ background: #000;
                <span class="new-dot"></span> 
             </div>
          </div>
-      
-      
-      
+   
 
    </div>
 
@@ -856,25 +859,92 @@ background: #000;
    Slides();
    
    function Slides() {
-     var i;
-     var slides = document.getElementsByClassName("Slides");
-     var dots = document.getElementsByClassName("new-dot");
-     for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-     }
-     slide++;
-     if (slide > slides.length) {slide = 1}    
-     for (i = 0; i < dots.length; i++) {
-       dots[i].className = dots[i].className.replace(" active", "");
-     }
-     slides[slide-1].style.display = "block";  
-     dots[slide-1].className += " active";
-     setTimeout(Slides, 2000); // Change image every 2 seconds
+      var i;
+      var slides = document.getElementsByClassName("Slides");
+      var dots = document.getElementsByClassName("new-dot");
+      for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";  
+      }
+      slide++;
+      if (slide > slides.length) {slide = 1}    
+      for (i = 0; i < dots.length; i++) {
+         dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slide-1].style.display = "block";  
+      dots[slide-1].className += " active";
+      setTimeout(Slides, 2000); // Change image every 2 seconds
    }
-   </script>
+</script> -->
+
+<div class="container">
+   <div class="main-title">
+      <h1>Customer Reviews</h1>
+     <p>Guaranteed high quality repair services under one roof</p>
+  </div>
+
+<div class="testimonial-area">
+   <div class="container">
+     
+       <div class="row">
+           <div class="col-md-12">
+               <div class="owl-carousel test-slides" id="testimonial-carousel">
+                   <div class="item">
+                       <div class="single-testimonial">
+                           <div class="img-area">
+                               <img src="images/img_nature_wide.jpg">
+                           </div>
+                           <div class="testi-text">
+                               <h4>RADHE RAMAN TIWARI<span>CEO, RadheTians</span></h4>
+                               <p>Hello, I'm Radhe Raman Tiwari And I'm using javascript and jquery-3</p>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="item">
+                       <div class="single-testimonial">
+                           <div class="img-area">
+                               <img src="images/img_nature_wide.jpg">
+                           </div>
+                           <div class="testi-text">
+                               <h4>RADHE RAMAN TIWARI<span>CEO, RadheTians</span></h4>
+                               <p>Hello, I'm Radhe Raman Tiwari And I'm using javascript and jquery-3</p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+</div>
+</div>
+<script>
+
+   $('#testimonial-carousel').owlCarousel({
+       autoplay:true,
+       dots:false,
+       nav:true,  
+       loop:true,
+       navText:['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+       responsive:{
+           0:{
+               items:1
+           },
+           600:{
+               items:2
+           },
+           1000:{
+               items:3
+           }
+       }
+   })
+</script>
+              
+                
+                  
+       
+
    
-
-
 
 <!----Start Problem repair-------->
 <div class="comparison content-area-18">
@@ -884,7 +954,7 @@ background: #000;
       <p>One step solution for all your home appliance</p>
     </div>	
     <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12" onmouseenter="showTouchItem(this)" onmouseleave="hideTouchItem(this)" >
+      <div class="col-lg-6 col-md-6 col-sm-12" onmouseenter="show1(this)" onmouseleave="hide1(this)" >
         <div class="flip-box">
           <div class="flip-box-inner">
             <div class="flip-box-front">
@@ -899,23 +969,23 @@ background: #000;
                <div class="top-item-style">
                      
                   <img class="img-item-style" src='./uploads/appliances/icons/icon_1558205486-air-conditioner.png'/>
-                  <span class="vl-line"></span>
+            
                   <div class="list-item-style">
-                     <h5>AC Repairing Service</h5>
-                     <p>Rebuilt.</p>
+                     <h5 class="list-item-style">Air Conditioners Repairing Service</h5>
+                     <p class="list-item-style">Rebuilt.</p>
                   </div>
                </div>
                
                
               <ul class="item-style">
                
-               <li class="hidden"><a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>AC COMMAN REAPIR/SERVICES</a></li>
+               <li class="hidden1"><a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>AC COMMAN REAPIR/SERVICES</a></li>
            
-               <li class="hidden"><a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>WINDOW AC REAPIR/SERVICES</a></li>
+               <li class="hidden1"><a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>WINDOW AC REAPIR/SERVICES</a></li>
               
-               <li class="hidden"><a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>SPLIT AC REAPIR/SERVICES</a></li>
+               <li class="hidden1"><a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>SPLIT AC REAPIR/SERVICES</a></li>
               
-               <li class="hidden"><a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>OTHER AC REAPIR/SERVICES</a></li>
+               <li class="hidden1"><a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>OTHER AC REAPIR/SERVICES</a></li>
 
               </ul>
             </div>
@@ -923,23 +993,8 @@ background: #000;
         </div>
       </div>
 
-      <script>
 
-         function showTouchItem(event){
-            $("ul li.hidden").each(function(i) {
-               $(this).delay(500 * i).queue(function(nxt) {
-                 $(this).removeClass('hidden');
-                 nxt();
-               });
-             });
-         }
-
-         function hideTouchItem(evevt){
-            $("ul li.hidden").addClass('hidden');
-         }
-      </script>
-
-      <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="col-lg-6 col-md-6 col-sm-12" onmouseenter="show2(this)" onmouseleave="hide2(this)" >
         <div class="flip-box">
           <div class="flip-box-inner">
             <div class="flip-box-front">
@@ -951,28 +1006,28 @@ background: #000;
             <div class="flip-box-back">
 
                <div class="top-item-style">
-                  <img class="img-item-style" src='./uploads/appliances/icons/icon_1558205486-air-conditioner.png'/>
-                  <span class="vl-line"></span>
+                  <img class="img-item-style" src='./uploads/appliances/icons/icon_1558205437-refrigerator.png'/>
+                 
                   <div class="list-item-style">
-                     <h5>Refrigerator Repairing Service</h5>
-                     <p>Rebuilt.</p>
+                     <h5 class="list-item-style">Refrigerator Repairing Service</h5>
+                     <p class="list-item-style">Rebuilt.</p>
                   </div>
                </div>
 
               <ul class="item-style">
                   
-                  <a href="https://www.rebuilt.co.in/Home/Appliance/Refrigerator/Gurgaon" target="_self"><span class="fa fa-star checked"></span>OVERLOAD PROTECTOR</a>
+               <li class="hidden2"><a href="https://www.rebuilt.co.in/Home/Appliance/Refrigerator/Gurgaon" target="_self"><span class="fa fa-star checked"></span>OVERLOAD PROTECTOR</a></li>
               
-                  <a href="https://www.rebuilt.co.in/Home/Appliance/Refrigerator/Gurgaon" target="_self"><span class="fa fa-star checked"></span>DEFROST TIMER</a>
-                 
-                  <a href="https://www.rebuilt.co.in/Home/Appliance/Refrigerator/Gurgaon" target="_self"><span class="fa fa-star checked"></span>THERMAL FUSE</a>
-                 
-                  <a href="https://www.rebuilt.co.in/Home/Appliance/Refrigerator/Gurgaon" target="_self"><span class="fa fa-star checked"></span>THERMAL SENSOR</a>
-                  
-                  <a href="https://www.rebuilt.co.in/Home/Appliance/Refrigerator/Gurgaon" target="_self"><span class="fa fa-star checked"></span>THERMOSTAT</a>
+               <li class="hidden2"><a href="https://www.rebuilt.co.in/Home/Appliance/Refrigerator/Gurgaon" target="_self"><span class="fa fa-star checked"></span>DEFROST TIMER</a></li>
+               
+               <li class="hidden2"><a href="https://www.rebuilt.co.in/Home/Appliance/Refrigerator/Gurgaon" target="_self"><span class="fa fa-star checked"></span>THERMAL FUSE</a></li>
+               
+               <li class="hidden2"><a href="https://www.rebuilt.co.in/Home/Appliance/Refrigerator/Gurgaon" target="_self"><span class="fa fa-star checked"></span>THERMAL SENSOR</a></li>
+            
+               <li class="hidden2"><a href="https://www.rebuilt.co.in/Home/Appliance/Refrigerator/Gurgaon" target="_self"><span class="fa fa-star checked"></span>THERMOSTAT</a></li>
 
-                  <a href="https://www.rebuilt.co.in/Home/Appliance/Refrigerator/Gurgaon" target="_self"><span class="fa fa-star checked"></span>FREEZEER FAN MOTOR</a>
-                 </ul>
+               <li class="hidden2"><a href="https://www.rebuilt.co.in/Home/Appliance/Refrigerator/Gurgaon" target="_self"><span class="fa fa-star checked"></span>FREEZEER FAN MOTOR</a></li>
+               </ul>
               </ul>
             </div>
           </div>
@@ -981,7 +1036,7 @@ background: #000;
   </div>
 
    <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-12">
+    <div class="col-lg-6 col-md-6 col-sm-12" onmouseenter="show3(this)" onmouseleave="hide3(this)">
       <div class="flip-box">
         <div class="flip-box-inner">
           <div class="flip-box-front">
@@ -991,22 +1046,26 @@ background: #000;
             </ul>
           </div>
           <div class="flip-box-back">
+
+            
+            <div class="top-item-style">
+               <img class="img-item-style" src='./uploads/appliances/icons/icon_1558205471-washing-machine.png'/>
+      
+               <div class="list-item-style">
+                  <h5 class="list-item-style">Washing-Machine Repairing Service</h5>
+                  <p class="list-item-style">Rebuilt.</p>
+               </div>
+            </div>
                
             <ul class="item-style">
-            
-
-            <h5>Washing-Machine Repairing Service</h5>
-
-             <p>Rebuilt.</p>
              
-             
-             <a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>AC COMMAN REAPIR/SERVICES</a>
+               <li class="hidden3"><a href="https://www.rebuilt.co.in/Home/Appliance/Washing+Machine/Gurgaon" target="_self"><span class="fa fa-star checked"></span>FULLY AUTOMATIC(FRONT LOAD)</a></li>
          
-             <a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>WINDOW AC REAPIR/SERVICES</a>
-            
-             <a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>SPLIT AC REAPIR/SERVICES</a>
-            
-             <a href="https://www.rebuilt.co.in/Home/Appliance/A.c//Gurgaon" target="_self"><span class="fa fa-star checked"></span>OTHER AC REAPIR/SERVICES</a>
+               <li class="hidden3"><a href="https://www.rebuilt.co.in/Home/Appliance/Washing+Machine/Gurgaon" target="_self"><span class="fa fa-star checked"></span>FULLY AUTOMATIC-TOP LOAD</a></li>
+         
+               <li class="hidden3"><a href="https://www.rebuilt.co.in/Home/Appliance/Washing+Machine/Gurgaon" target="_self"><span class="fa fa-star checked"></span>SEMI AUTOMATIC</a></li>
+         
+               <li class="hidden3"><a href="https://www.rebuilt.co.in/Home/Appliance/Washing+Machine/Gurgaon" target="_self"><span class="fa fa-star checked"></span>WM-COMMON REAPIR</a></li>
 
             </ul>
           </div>
@@ -1015,66 +1074,136 @@ background: #000;
     </div>
 
 
-      <div class="col-lg-6 col-md-6 col-sm-12">
-        <div class="flip-box">
-          <div class="flip-box-inner">
-            <div class="flip-box-front">
-              <img class="card-img-top img-fluid" src="./assets/template/img/pricing/pricing-micro.png" alt="property-2">
+    <div class="col-lg-6 col-md-6 col-sm-12" onmouseenter="show4(this)" onmouseleave="hide4(this)">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img class="card-img-top img-fluid" src="./assets/template/img/pricing/pricing-micro.png" alt="property-2">
+            <ul class="item-style">
+               <h5 class="repair-set">Microwave/Oven Repairing Services</h5>
+            </ul>
+          </div>
+          <div class="flip-box-back">
+
+            
+            <div class="top-item-style">
+               <img class="img-item-style" src='./uploads/appliances/icons/icon_1558205459-microwave.png'/>
+      
+               <div class="list-item-style">
+                  <h5 class="list-item-style">Microwave/Oven Repairing Services</h5>
+                  <p class="list-item-style">Rebuilt.</p>
+               </div>
             </div>
-            <div class="flip-box-back">
-              <ul class="item-style">
-                <li>OVERLOAD PROTECTOR</li>
-                <li>DEFROST TIMER</li>
-                <li>THERMAL FUSE</li>
-                <li>THERMAL SENSOR</li>
-                <li>THERMOSTAT</li>
-                <li>FREEZEER FAN MOTOR</li>
-              </ul>
-            </div>
+               
+            <ul class="item-style">
+             
+               <li class="hidden4"><a href="https://www.rebuilt.co.in/Home/Appliance/Microwave/Gurgaon" target="_self"><span class="fa fa-star checked"></span>MEGNOTRON 5 PIN</a></li>
+         
+               <li class="hidden4"><a href="https://www.rebuilt.co.in/Home/Appliance/Microwave/Gurgaon" target="_self"><span class="fa fa-star checked"></span>MEGNOTRON 6 PIN</a></li>
+         
+               <li class="hidden4"><a href="https://www.rebuilt.co.in/Home/Appliance/Microwave/Gurgaon" target="_self"><span class="fa fa-star checked"></span>HV DIODE</a></li>
+         
+               <li class="hidden4"><a href="https://www.rebuilt.co.in/Home/Appliance/Microwave/Gurgaon" target="_self"><span class="fa fa-star checked"></span>HV TRANSFORMER</a></li>
+
+               <li class="hidden4"><a href="https://www.rebuilt.co.in/Home/Appliance/Microwave/Gurgaon" target="_self"><span class="fa fa-star checked"></span>HV CAPACITOR</a></li>
+
+               <li class="hidden4"><a href="https://www.rebuilt.co.in/Home/Appliance/Microwave/Gurgaon" target="_self"><span class="fa fa-star checked"></span>BULB</a></li>
+
+            </ul>
           </div>
         </div>
       </div>
-   </div>   
+    </div>
+
+
+     
          
    <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-12">
-      <div class="flip-box">
-        <div class="flip-box-inner">
-          <div class="flip-box-front">
-            <img class="card-img-top img-fluid" src="./assets/template/img/pricing/pricing-ro.png" alt="property-2">
-          </div>
-          <div class="flip-box-back">
-            <ul class="item-style">
-              <li>OVERLOAD PROTECTOR</li>
-              <li>DEFROST TIMER</li>
-              <li>THERMAL FUSE</li>
-              <li>THERMAL SENSOR</li>
-              <li>THERMOSTAT</li>
-              <li>FREEZEER FAN MOTOR</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-12">
-      <div class="flip-box">
-        <div class="flip-box-inner">
-          <div class="flip-box-front">
-            <img class="card-img-top img-fluid" src="./assets/template/img/pricing/pricing-gyser.png" alt="property-2">
-          </div>
-          <div class="flip-box-back">
-            <ul class="item-style">
-              <li>OVERLOAD PROTECTOR</li>
-              <li>DEFROST TIMER</li>
-              <li>THERMAL FUSE</li>
-              <li>THERMAL SENSOR</li>
-              <li>THERMOSTAT</li>
-              <li>FREEZEER FAN MOTOR</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12" onmouseenter="show5(this)" onmouseleave="hide5(this)">
+         <div class="flip-box">
+           <div class="flip-box-inner">
+             <div class="flip-box-front">
+               <img class="card-img-top img-fluid" src="./assets/template/img/pricing/pricing-ro.png" alt="property-2">
+               <ul class="item-style">
+                  <h5 class="repair-set">RO Repairing Service/ Parts</h5>
+               </ul>
+             </div>
+             <div class="flip-box-back">
+   
+               
+               <div class="top-item-style">
+                  <img class="img-item-style" src='./uploads/appliances/icons/icon_1564980052-597616.png'/>
+         
+                  <div class="list-item-style">
+                     <h5 class="list-item-style">RO Repairing Service/ Parts</h5>
+                     <p class="list-item-style">Rebuilt.</p>
+                  </div>
+               </div>
+                  
+               <ul class="item-style">
+                
+                  <li class="hidden5"><a href="https://www.rebuilt.co.in/Home/Appliance/RO+or+Water+Purifier/Gurgaon" target="_self"><span class="fa fa-star checked"></span>MEGNOTRON 5 PIN</a></li>
+            
+                  <li class="hidden5"><a href="https://www.rebuilt.co.in/Home/Appliance/RO+or+Water+Purifier/Gurgaon" target="_self"><span class="fa fa-star checked"></span>MEGNOTRON 6 PIN</a></li>
+            
+                  <li class="hidden5"><a href="https://www.rebuilt.co.in/Home/Appliance/RO+or+Water+Purifier/Gurgaon" target="_self"><span class="fa fa-star checked"></span>HV DIODE</a></li>
+            
+                  <li class="hidden5"><a href="https://www.rebuilt.co.in/Home/Appliance/RO+or+Water+Purifier/Gurgaon" target="_self"><span class="fa fa-star checked"></span>HV TRANSFORMER</a></li>
+   
+                  <li class="hidden5"><a href="https://www.rebuilt.co.in/Home/Appliance/RO+or+Water+Purifier/Gurgaon" target="_self"><span class="fa fa-star checked"></span>HV CAPACITOR</a></li>
+   
+                  <li class="hidden5"><a href="https://www.rebuilt.co.in/Home/Appliance/RO+or+Water+Purifier/Gurgaon" target="_self"><span class="fa fa-star checked"></span>BULB</a></li>
+   
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <div class="col-lg-6 col-md-6 col-sm-12" onmouseenter="show6(this)" onmouseleave="hide6(this)">
+         <div class="flip-box">
+           <div class="flip-box-inner">
+             <div class="flip-box-front">
+               <img class="card-img-top img-fluid"  src="./assets/template/img/pricing/pricing-gyser.png"  alt="property-2">
+               <ul class="item-style">
+                  <h5 class="repair-set">Geyser Repairing Service</h5>
+               </ul>
+             </div>
+             <div class="flip-box-back">
+   
+               
+               <div class="top-item-style">
+                  <img class="img-item-style" src='./uploads/appliances/icons/icon_1564980066-icon_1564287763-58-512.png'/>
+         
+                  <div class="list-item-style">
+                     <h5 class="list-item-style">Geyser Repairing Service</h5>
+                     <p class="list-item-style">Rebuilt.</p>
+                  </div>
+               </div>
+                  
+               <ul class="item-style">
+                
+                  <li class="hidden6"><a href="https://www.rebuilt.co.in/Home/Appliance/Geyser/Gurgaon" target="_self"><span class="fa fa-star checked"></span>GASKET</a></li>
+            
+                  <li class="hidden6"><a href="https://www.rebuilt.co.in/Home/Appliance/Geyser/Gurgaon" target="_self"><span class="fa fa-star checked"></span>HEATING ELEMENT</a></li>
+            
+                  <li class="hidden6"><a href="https://www.rebuilt.co.in/Home/Appliance/Geyser/Gurgaon" target="_self"><span class="fa fa-star checked"></span>THERMOSTATE</a></li>
+            
+                  <li class="hidden6"><a href="https://www.rebuilt.co.in/Home/Appliance/Geyser/Gurgaon" target="_self"><span class="fa fa-star checked"></span>COOPER TANK</a></li>
+   
+                  <li class="hidden6"><a href="https://www.rebuilt.co.in/Home/Appliance/Geyser/Gurgaon" target="_self"><span class="fa fa-star checked"></span>DESCALE</a></li>
+   
+                  <li class="hidden6"><a href="https://www.rebuilt.co.in/Home/Appliance/Geyser/Gurgaon" target="_self"><span class="fa fa-star checked"></span>ASSEMBLY COOPER</a></li>
+   
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+   
+    
+    
        
           
   </div>
