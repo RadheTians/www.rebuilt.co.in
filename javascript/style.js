@@ -32,7 +32,7 @@ function show2(event){
 }
 
 function hide2(event){
-  $event.each(function(){
+  $(event).each(function(){
     $("ul li.hidden2").addClass('hidden2');
   });
   
@@ -52,7 +52,7 @@ function show3(event){
 }
 
 function hide3(event){
-  $event.each(function(){
+  $(event).each(function(){
     $("ul li.hidden3").addClass('hidden3');
   });
   
@@ -72,7 +72,7 @@ function show4(event){
 }
 
 function hide4(event){
-  $event.each(function(){
+  $(event).each(function(){
     $("ul li.hidden4").addClass('hidden4');
   });
   
@@ -90,7 +90,7 @@ function show5(event){
 }
 
 function hide5(event){
-  $event.each(function(){
+  $(event).each(function(){
     $("ul li.hidden5").addClass('hidden5');
   });
   
@@ -110,7 +110,7 @@ function show6(event){
 }
 
 function hide6(event){
-  $event.each(function(){
+  $(event).each(function(){
     $("ul li.hidden6").addClass('hidden6');
   });
   
